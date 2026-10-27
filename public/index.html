@@ -2,17 +2,17 @@
 <html lang="pt-BR">
 <head>
   <!-- ACADEPOL favicon -->
-  <link rel="icon" type="image/png" href="/academia-logo.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/academia-logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/academia-logo.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/academia-logo.png">
+  <link rel="icon" href="/academia.svg" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/academia.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/academia.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/academia.svg">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ACADEPOL — Academia de Polícia</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#101010;color:#ffffff;font-family:Inter,Segoe UI,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!important}
-.auth{min-height:100vh;display:grid;place-items:center;padding:20px}.auth-card{width:min(430px,100%);background:#191919;border:1px solid #383838;border-radius:18px;padding:30px;box-shadow:0 30px 90px #0008}.logo{display:flex;gap:12px;align-items:center;margin-bottom:24px}.mark{width:45px;height:45px;border-radius:13px;background:#111;display:grid;place-items:center;overflow:hidden}.mark img{width:100%;height:100%;object-fit:cover}.logo b{font-size:18px}.logo small{display:block;color:#d0d0d0;font-size:9px;letter-spacing:1.5px;margin-top:3px}.tabs{display:flex;background:#111111;padding:4px;border-radius:9px}.tabs button{flex:1;border:0;background:none;color:#c7c7c7;padding:10px;border-radius:7px}.tabs button.active{background:#8f111b;color:#fff}.auth h1{font-size:24px;margin:25px 0 6px}.muted{color:#c7c7c7}.field{margin:12px 0}.field label{display:block;font-size:12px;color:#dddddd;margin-bottom:6px}.field input,.field select{width:100%;padding:11px;background:#111111;border:1px solid #555555;border-radius:8px;color:#fff}.btn{border:0;background:#c51f2b;color:#fff;font-weight:700;padding:11px 15px;border-radius:8px}.btn.full{width:100%;margin-top:10px}.btn.green{background:#158c52}.btn.red{background:#a92c3b}.btn.gray{background:#182b3f}.msg{margin-top:12px;padding:10px;border-radius:8px;background:#102c47;color:#a7d0ff;font-size:13px}
+.auth{min-height:100vh;display:grid;place-items:center;padding:20px}.auth-card{width:min(430px,100%);background:#191919;border:1px solid #383838;border-radius:18px;padding:30px;box-shadow:0 30px 90px #0008}.logo{display:flex;gap:12px;align-items:center;margin-bottom:24px}.mark{width:45px;height:45px;border-radius:13px;background:#c51f2b;display:grid;place-items:center;font-size:22px}.logo b{font-size:18px}.logo small{display:block;color:#d0d0d0;font-size:9px;letter-spacing:1.5px;margin-top:3px}.tabs{display:flex;background:#111111;padding:4px;border-radius:9px}.tabs button{flex:1;border:0;background:none;color:#c7c7c7;padding:10px;border-radius:7px}.tabs button.active{background:#8f111b;color:#fff}.auth h1{font-size:24px;margin:25px 0 6px}.muted{color:#c7c7c7}.field{margin:12px 0}.field label{display:block;font-size:12px;color:#dddddd;margin-bottom:6px}.field input,.field select{width:100%;padding:11px;background:#111111;border:1px solid #555555;border-radius:8px;color:#fff}.btn{border:0;background:#c51f2b;color:#fff;font-weight:700;padding:11px 15px;border-radius:8px}.btn.full{width:100%;margin-top:10px}.btn.green{background:#158c52}.btn.red{background:#a92c3b}.btn.gray{background:#182b3f}.msg{margin-top:12px;padding:10px;border-radius:8px;background:#102c47;color:#a7d0ff;font-size:13px}
 .app{display:none}.side{position:fixed;left:0;top:0;bottom:0;width:225px;background:#07121f;border-right:1px solid #193047;padding:18px 13px}.brand{display:flex;align-items:center;gap:10px;padding:8px 7px 24px}.brand .mark{width:41px;height:41px}.brand span{display:block;color:#738aa2;font-size:9px;letter-spacing:1.3px;margin-top:2px}.nav button{width:100%;text-align:left;border:0;background:none;color:#9cadbf;padding:11px 12px;border-radius:8px;margin:2px 0}.nav button.active,.nav button:hover{background:#086bdc;color:#fff}.me{position:absolute;left:13px;right:13px;bottom:16px;padding:11px;background:#0c1a29;border:1px solid #193047;border-radius:9px}.me small{display:block;color:#788ea6;margin-top:3px}.logout{float:right;margin-top:-28px;border:0;background:none;color:#90a4ba}
 main{margin-left:225px;padding:25px 32px;max-width:1600px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.top h1{margin:0;font-size:25px}.top p{margin:5px 0;color:#879bb0}.top-right{display:flex;align-items:center;gap:8px}.presence-wrap{position:relative}.presence-btn{height:42px;padding:0 12px;border:1px solid #555555;background:#0d1b2a;color:#cbd7e1;border-radius:9px;font-size:10px;font-weight:800;display:flex;align-items:center;gap:7px;cursor:pointer}.presence-btn:hover{border-color:#e02b36}.presence-dot{width:7px;height:7px;border-radius:50%;background:#4fe39a;box-shadow:0 0 9px #4fe39a88}.presence-panel{position:absolute;right:0;top:49px;width:min(330px,calc(100vw - 30px));background:#0b1b2a;border:1px solid #27465d;border-radius:12px;box-shadow:0 25px 70px #000b;z-index:100;display:none;overflow:hidden}.presence-panel.show{display:block}.presence-head{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;border-bottom:1px solid #1b3348}.presence-head strong{font-size:12px}.presence-head small{color:#d0d0d0;font-size:8px}.presence-list{max-height:360px;overflow:auto}.presence-item{display:flex;align-items:center;gap:9px;padding:10px 14px;border-bottom:1px solid #162e41}.presence-item:last-child{border-bottom:0}.presence-avatar{width:30px;height:30px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:#252525;border:1px solid #2a506a;color:#b9d5e9;font-size:9px;font-weight:800;flex:none}.presence-avatar img{width:100%;height:100%;object-fit:cover}.presence-info{min-width:0;flex:1}.presence-info b{display:block;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.presence-info small{display:block;color:#d0d0d0;font-size:8px;margin-top:2px}.presence-status{display:flex;align-items:center;gap:5px;font-size:8px;font-weight:800}.presence-status i{width:6px;height:6px;border-radius:50%;background:#4fe39a}.presence-status.offline{color:#d0d0d0}.presence-status.offline i{background:#566574;box-shadow:none}.presence-empty{padding:24px 14px;text-align:center;color:#70879a;font-size:9px}.date{background:#0d1b2a;border:1px solid #1b334a;border-radius:9px;padding:10px 14px}.notification-wrap{position:relative}.notification-btn{width:42px;height:42px;border:1px solid #555555;background:#0d1b2a;color:#cbd7e1;border-radius:9px;position:relative;font-size:17px}.notification-btn:hover{border-color:#e02b36}.notification-count{position:absolute;right:-4px;top:-5px;min-width:18px;height:18px;padding:0 4px;border-radius:10px;background:#e02b36;color:#08121c;font-size:10px;font-weight:800;display:none;align-items:center;justify-content:center;border:2px solid #101010}.notification-count.show{display:flex}.notification-panel{position:absolute;right:0;top:49px;width:min(390px,calc(100vw - 30px));background:#0b1b2a;border:1px solid #27465d;border-radius:12px;box-shadow:0 25px 70px #000b;z-index:100;display:none;overflow:hidden}.notification-panel.show{display:block}.notification-head{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;border-bottom:1px solid #1b3348}.notification-head strong{font-size:12px}.notification-head button{border:0;background:none;color:#e02b36;font-size:9px;font-weight:700}.notification-list{max-height:390px;overflow:auto}.notification-item{padding:12px 14px;border-bottom:1px solid #162e41;cursor:pointer}.notification-item:hover{background:#0e2435}.notification-item.unread{background:#0d2233}.notification-item .ntop{display:flex;gap:8px;align-items:flex-start}.notification-item .nicon{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;background:#15334a;flex:none;font-size:11px}.notification-item.success .nicon{color:#62e2a8}.notification-item.danger .nicon{color:#ff8d96}.notification-item.result .nicon{color:#8cc9ff}.notification-item .ntitle{font-size:10px;font-weight:800}.notification-item .nmessage{font-size:9px;line-height:1.45;color:#91a5b6;margin-top:3px}.notification-item .ntime{font-size:8px;color:#5f778a;margin-top:6px}.notification-empty{padding:28px 16px;text-align:center;color:#70879a;font-size:9px}.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:11px}.card{background:linear-gradient(145deg,#0e1e2e,#0b1724);border:1px solid #1a3047;border-radius:10px;padding:16px}.ico{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;float:left;margin-right:10px}.blue{background:#c51f2b}.green{background:#159a54}.yellow{background:#dca000}.purple{background:#7144dc}.orange{background:#db7410}.red{background:#d73c4a}.card small{color:#9baabd;font-size:10px;text-transform:uppercase}.card b{display:block;font-size:27px;margin-top:7px}.card span{color:#7489a0;font-size:10px}.grid{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-top:14px}.panel{background:linear-gradient(145deg,#0d1b2a,#0a1724);border:1px solid #1a3047;border-radius:10px;overflow:hidden}.ph{padding:15px 17px;border-bottom:1px solid #1a2e43;display:flex;justify-content:space-between;align-items:center}.ph h2{font-size:14px;margin:0}.pb{padding:15px}.table{width:100%;border-collapse:collapse;font-size:12px}.table th{color:#8094aa;text-align:left;padding:10px 7px;border-bottom:1px solid #1d3349}.table td{padding:11px 7px;border-bottom:1px solid #172a3e}.status{padding:4px 7px;border-radius:5px;font-size:9px;font-weight:700}.ok{background:#0d5539;color:#55e29c}.pending{background:#584308;color:#ffd15a}.cancel{background:#591d26;color:#ff929b}.list div{padding:12px 0;border-bottom:1px solid #192d42}.badge.coord{background:#6b4a0b;color:#ffd66b}.badge{background:#163451;color:#94caff;padding:4px 8px;border-radius:5px;font-size:10px}.toolbar{display:flex;gap:10px;margin-bottom:14px}.toolbar .spacer{flex:1}.toolbar input{background:#111111;border:1px solid #555555;color:#fff;border-radius:8px;padding:10px}.calendar{overflow:auto}.cal{display:grid;grid-template-columns:55px repeat(7,1fr);min-width:800px}.cal div{border-right:1px solid #172b3f;border-bottom:1px solid #172b3f;min-height:58px;padding:7px;font-size:10px}.cal .head{min-height:auto;text-align:center;color:#91a4b8}.event{background:#0878d8;border-radius:5px;padding:7px;min-height:45px}.event.g{background:#159a54}.event.p{background:#7144dc}.event.o{background:#d9780c}.page{display:none}.page.active{display:block}.modal{position:fixed;inset:0;background:#0009;display:none;place-items:center;padding:20px;z-index:20}.modal.show{display:grid}.modal-card{width:min(520px,100%);background:#0d1b2a;border:1px solid #25425d;border-radius:13px;padding:22px}.modal-head{display:flex;justify-content:space-between}.close{border:0;background:none;color:#a6b5c5;font-size:24px}
 .approval{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:15px;border-bottom:1px solid #1b3046}.actions{display:flex;gap:7px}.user-actions{display:flex;gap:6px;flex-wrap:wrap}.user-actions .btn{padding:7px 9px;font-size:11px}.role-select{background:#111111;color:#fff;border:1px solid #555555;border-radius:7px;padding:7px;font-size:11px}.modal-card.wide{width:min(720px,100%)}
@@ -2136,7 +2136,7 @@ html,body,#app{background:var(--cpi-bg)!important}
   position:relative!important;
   background:
     linear-gradient(90deg,rgba(2,10,17,.98) 0%,rgba(2,10,17,.86) 36%,rgba(2,10,17,.48) 69%,rgba(2,10,17,.83) 100%),
-    url('/academia-bg.svg') center/cover no-repeat!important;
+    url('/academia-hero.png') center/cover no-repeat!important;
 }
 #dashboard .cpi-hero:after{
   content:"";position:absolute;inset:0;pointer-events:none;
@@ -2388,7 +2388,7 @@ html,body,#app{background:var(--cpi-bg)!important}
   min-height:196px!important;
   background:
     linear-gradient(90deg,rgba(2,10,17,.98) 0%,rgba(2,10,17,.78) 43%,rgba(2,10,17,.38) 100%),
-    url('/academia-bg.svg') center/cover no-repeat!important;
+    url('/academia-hero.png') center/cover no-repeat!important;
 }
 #dashboard .cpi-hero-copy{padding:27px 30px!important}
 #dashboard .cpi-hero h1{font-size:31px!important}
@@ -2863,7 +2863,7 @@ html,body,#app{background:#020a12!important;color:var(--cpi-text)!important}
   overflow:hidden!important;
   background:
     linear-gradient(90deg,rgba(2,10,17,.97) 0%,rgba(2,10,17,.78) 43%,rgba(2,10,17,.35) 100%),
-    url('/academia-bg.svg') center/cover no-repeat!important;
+    url('/academia-hero.png') center/cover no-repeat!important;
 }
 #dashboard .cpi-hero-copy{
   padding:28px 30px!important;
@@ -3573,11 +3573,21 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
 #app a:hover{color:#e32636}
 </style>
 
+
+<style id="acadepol-official-hero">
+#dashboard .cpi-hero{background-image:linear-gradient(90deg,rgba(0,0,0,.60) 0%,rgba(0,0,0,.30) 48%,rgba(0,0,0,.18) 100%),url('/academia-hero.png')!important;background-position:center center!important;background-size:cover!important;background-repeat:no-repeat!important;border:1px solid #555!important;min-height:220px!important;height:220px!important;}
+#dashboard .cpi-hero-logo{display:none!important}
+#dashboard .cpi-eyebrow,#dashboard .cpi-hero h1 span,#dashboard .cpi-hero h1 #heroUserName{color:#ef343f!important}
+#dashboard .cpi-gold-line{background:#ef343f!important}
+#dashboard .cpi-hero-copy{max-width:72%;}
+@media(max-width:700px){#dashboard .cpi-hero{height:245px!important;min-height:245px!important;background-position:center!important}#dashboard .cpi-hero-copy{max-width:100%;padding:20px!important}#dashboard .cpi-hero .cpi-description{max-width:85%;}}
+</style>
+
 </head>
 <body>
 <div id="auth" class="auth">
   <div class="auth-card">
-    <div class="logo"><div class="mark"><img src="/academia-logo.png" alt="Logo ACADEPOL"></div><div><b>ACADEPOL</b><small>ACADEMIA DE POLÍCIA</small><em>FORMAÇÃO POLICIAL</em></div></div>
+    <div class="logo"><div class="mark">★</div><div><b>INSTRUTORES</b><small>SISTEMA DE GESTÃO</small><em>CORPO DE INSTRUTORES POLICIAIS</em></div></div>
     <div class="tabs"><button id="tLogin" class="active" onclick="authTab('login')">Entrar</button><button id="tReg" onclick="authTab('register')">Criar cadastro</button></div>
     <div id="loginBox">
       <h1>Bem-vindo de volta</h1><p class="muted">Acesse sua área de instrutor com seu usuário.</p>
@@ -3661,8 +3671,8 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
 <div id="app" class="app hidden">
 <aside class="side">
   <div class="brand brand-approved">
-  <div class="brand-logo"><img src="/academia-logo.png" alt="ACADEPOL — Academia de Polícia"></div>
-  <div class="brand-copy"><b>ACADEPOL</b><span>ACADEMIA DE POLÍCIA</span></div>
+  <div class="brand-logo"><img src="/academia.svg" alt="ACADEPOL"></div>
+  <div class="brand-copy"><b>CORPO DE<br>INSTRUTORES</b><span>SISTEMA DE GESTÃO</span></div>
 </div>
   <div class="nav">
     <div id="instructionNavGroup" class="nav-instruction-group">
@@ -3711,7 +3721,7 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
 </div>
 </aside>
 <main>
-  <div class="top"><div><h1 id="title">DASHBOARD</h1><p id="subtitle">Visão geral do sistema</p><div class="unit-line">ACADEMIA DE POLÍCIA <span>•</span> 1º BPM <span>•</span> SINCE 2025</div></div><div class="top-right"><div class="presence-wrap"><button class="presence-btn" id="presenceBtn" type="button" aria-label="Usuários online" aria-expanded="false"><span class="presence-dot"></span><span id="presenceCount">0 online</span></button><div class="presence-panel" id="presencePanel"><div class="presence-head"><strong>Usuários no site</strong><small id="presenceUpdated">Atualizando...</small></div><div class="presence-list" id="presenceList"><div class="presence-empty">Carregando...</div></div></div></div><div class="notification-wrap"><button class="notification-btn" id="notificationBtn" type="button" aria-label="Notificações" aria-expanded="false"><span class="notification-count" id="notificationCount">0</span></button><div class="notification-panel" id="notificationPanel"><div class="notification-head"><strong>Notificações</strong><button type="button" onclick="markAllNotificationsRead()">Marcar todas como lidas</button></div><div class="notification-list" id="notificationList"><div class="notification-empty">Nenhuma notificação.</div></div></div></div><div class="date">▣ <b id="todayText"></b></div><div id="workspaceSwitcher" class="workspace-switcher" aria-label="Alternar área"><button id="workspaceRecruitmentBtn" type="button" onclick="switchWorkspace('recruitment')"><span class="ws-dot"></span>RECRUTAMENTO</button><button id="workspaceInstructionBtn" type="button" onclick="switchWorkspace('instruction')"><span class="ws-dot"></span>INSTRUÇÃO</button></div><button class="top-profile" type="button" onclick="openProfile()"><span class="top-profile-avatar" id="topProfileAvatar">?</span><span><b id="topProfileName">—</b><small id="topProfileRole">—</small></span></button></div></div>
+  <div class="top"><div><h1 id="title">DASHBOARD</h1><p id="subtitle">Visão geral do sistema</p><div class="unit-line">CORPO DE INSTRUTORES POLICIAIS <span>•</span> 1º BPM <span>•</span> SINCE 2025</div></div><div class="top-right"><div class="presence-wrap"><button class="presence-btn" id="presenceBtn" type="button" aria-label="Usuários online" aria-expanded="false"><span class="presence-dot"></span><span id="presenceCount">0 online</span></button><div class="presence-panel" id="presencePanel"><div class="presence-head"><strong>Usuários no site</strong><small id="presenceUpdated">Atualizando...</small></div><div class="presence-list" id="presenceList"><div class="presence-empty">Carregando...</div></div></div></div><div class="notification-wrap"><button class="notification-btn" id="notificationBtn" type="button" aria-label="Notificações" aria-expanded="false"><span class="notification-count" id="notificationCount">0</span></button><div class="notification-panel" id="notificationPanel"><div class="notification-head"><strong>Notificações</strong><button type="button" onclick="markAllNotificationsRead()">Marcar todas como lidas</button></div><div class="notification-list" id="notificationList"><div class="notification-empty">Nenhuma notificação.</div></div></div></div><div class="date">▣ <b id="todayText"></b></div><div id="workspaceSwitcher" class="workspace-switcher" aria-label="Alternar área"><button id="workspaceRecruitmentBtn" type="button" onclick="switchWorkspace('recruitment')"><span class="ws-dot"></span>RECRUTAMENTO</button><button id="workspaceInstructionBtn" type="button" onclick="switchWorkspace('instruction')"><span class="ws-dot"></span>INSTRUÇÃO</button></div><button class="top-profile" type="button" onclick="openProfile()"><span class="top-profile-avatar" id="topProfileAvatar">?</span><span><b id="topProfileName">—</b><small id="topProfileRole">—</small></span></button></div></div>
 
   
 <section id="dashboard" class="page active">
@@ -3719,11 +3729,11 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
     <div class="cpi-hero-copy">
       <div class="cpi-eyebrow">SISTEMA DE GESTÃO</div>
       <h1><span id="heroGreeting">Boa noite</span>, <span id="heroUserName">Usuário</span></h1>
-      <p>Bem-vindo ao Sistema de Gestão do Corpo de Instrutores.</p>
+      <p>Bem-vindo à ACADEPOL — Academia de Polícia.</p>
       <div class="cpi-gold-line"></div>
       <p class="cpi-description">
-        Gerencie marcações, instrutores e acompanhe os resultados<br>
-        dos cursos de forma rápida e eficiente.
+        Aprimore sua formação, acompanhe treinamentos e fortaleça os resultados<br>
+        com disciplina, técnica e excelência.
       </p>
     </div>
     <img class="cpi-hero-logo" src="/academia.svg" alt="ACADEPOL — Academia de Polícia">
@@ -8025,7 +8035,7 @@ function exportCourseParticipantsTableCSV(){
 
 /* RECRUITMENT DASHBOARD — aligned visually with the main instructor dashboard, fully scoped */
 .recruitment-dashboard-page{padding-bottom:30px}
-.recruitment-dashboard-page .recruitment-hero{height:208px;border:1px solid #19384e;border-radius:9px;overflow:hidden;position:relative;background:linear-gradient(90deg,rgba(2,10,17,.98) 0%,rgba(2,10,17,.86) 36%,rgba(2,10,17,.48) 69%,rgba(2,10,17,.83) 100%),url('/academia-bg.svg') center/cover no-repeat}
+.recruitment-dashboard-page .recruitment-hero{height:208px;border:1px solid #19384e;border-radius:9px;overflow:hidden;position:relative;background:linear-gradient(90deg,rgba(2,10,17,.98) 0%,rgba(2,10,17,.86) 36%,rgba(2,10,17,.48) 69%,rgba(2,10,17,.83) 100%),url('/academia-hero.png') center/cover no-repeat}
 .recruitment-dashboard-page .recruitment-hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 65%,rgba(2,10,17,.42) 100%)}
 .recruitment-hero-copy{position:relative;z-index:2;padding:28px 30px}.recruitment-eyebrow{color:var(--cpi-gold);font-size:11px;font-weight:900;letter-spacing:2px}.recruitment-hero h1{margin:7px 0 4px;font-size:32px;line-height:1.05;color:#ffffff}.recruitment-hero h1 span{color:var(--cpi-gold)}.recruitment-hero h1 #recruitmentGreeting{color:#f2f5f7}.recruitment-hero h1 #recruitmentUserName{color:var(--cpi-gold)}.recruitment-hero p{margin:0;font-size:15px;color:#d2d9de}.recruitment-gold-line{width:47px;height:2px;background:var(--cpi-gold);margin:17px 0 14px}.recruitment-description{line-height:1.65;font-size:13px!important;color:#bdc8d0!important}.recruitment-hero-logo{position:absolute;right:35px;top:50%;transform:translateY(-50%);width:164px;height:164px;object-fit:contain;z-index:3;filter:drop-shadow(0 8px 18px rgba(0,0,0,.65))}
 .recruitment-cpi-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:-1px;position:relative;z-index:4}.recruitment-cpi-kpi{min-height:92px;border:1px solid #1a3548;border-radius:9px;background:linear-gradient(145deg,#071823,#04101a);display:flex;align-items:center;gap:13px;padding:15px}.recruitment-cpi-kpi .rk-icon{width:53px;height:53px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;background:rgba(0,0,0,.08);flex:0 0 auto}.recruitment-cpi-kpi .rk-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.recruitment-cpi-kpi.blue{color:var(--cpi-blue)}.recruitment-cpi-kpi.gold{color:var(--cpi-gold)}.recruitment-cpi-kpi.red{color:var(--cpi-red)}.recruitment-cpi-kpi.purple{color:var(--cpi-purple)}.recruitment-cpi-kpi strong{display:block;color:#ffffff;font-size:27px;line-height:1}.recruitment-cpi-kpi b{display:block;color:#edf1f4;font-size:12px;margin-top:5px}.recruitment-cpi-kpi span{display:block;color:#8999a7;font-size:10px;margin-top:4px}
