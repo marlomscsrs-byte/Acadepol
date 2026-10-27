@@ -3583,6 +3583,36 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
 @media(max-width:700px){#dashboard .cpi-hero{height:245px!important;min-height:245px!important;background-position:center!important}#dashboard .cpi-hero-copy{max-width:100%;padding:20px!important}#dashboard .cpi-hero .cpi-description{max-width:85%;}}
 </style>
 
+
+<style id="acadepol-hero-layout-fix">
+/* ACADEPOL hero: keep the complete banner visible and reserve space below it. */
+#dashboard .cpi-hero,
+#dashboard .recruitment-hero {
+  box-sizing: border-box !important;
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+  margin-bottom: 12px !important;
+  overflow: hidden !important;
+  background-position: center center !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+}
+#dashboard .cpi-hero-copy,
+#dashboard .recruitment-hero-copy {
+  max-width: 54% !important;
+  box-sizing: border-box !important;
+}
+@media (max-width: 700px) {
+  #dashboard .cpi-hero,
+  #dashboard .recruitment-hero {
+    height: 230px !important; min-height: 230px !important; max-height: 230px !important;
+    background-size: 100% 100% !important;
+  }
+  #dashboard .cpi-hero-copy,
+  #dashboard .recruitment-hero-copy { max-width: 76% !important; padding: 18px !important; }
+}
+</style>
 </head>
 <body>
 <div id="auth" class="auth">
