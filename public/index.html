@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 <head>
   <!-- ACADEPOL favicon -->
-  <link rel="icon" href="/academia.svg" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/academia.svg">
-  <link rel="icon" type="image/png" sizes="16x16" href="/academia.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/academia.svg">
+  <link rel="icon" type="image/png" href="/academia-logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/academia-logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/academia-logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/academia-logo.png">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -3612,6 +3612,28 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
   #dashboard .cpi-hero-copy,
   #dashboard .recruitment-hero-copy { max-width: 76% !important; padding: 18px !important; }
 }
+</style>
+
+<style id="acadepol-login-monochrome-final">
+/* ACADEPOL: login em preto, branco, cinza e vermelho — neutraliza azul/dourado antigos */
+:root{--gold:#d92332!important;--gold2:#ffffff!important;--navy:#080808!important;--navy2:#151515!important;--panel:#171717!important;--panel2:#202020!important;--line:#444444!important;--text:#f5f5f5!important;--muted:#bdbdbd!important;}
+#auth.auth,.auth{background:#080808 url('/academia-hero.png') center center / cover no-repeat!important;color:#fff!important;}
+#auth.auth:after,.auth:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.48) 55%,rgba(0,0,0,.34));}
+#auth.auth:before,.auth:before{display:none!important;}
+#auth .auth-card,.auth-card{background:rgba(12,12,12,.90)!important;border:1px solid #666!important;box-shadow:0 24px 70px rgba(0,0,0,.7)!important;backdrop-filter:blur(5px);}
+#auth .logo .mark,.auth .logo .mark{background:#111 url('/academia-logo.png') center/contain no-repeat!important;border:1px solid #555!important;box-shadow:none!important;}
+#auth .tabs,.auth .tabs{background:#111!important;border:1px solid #444!important;}
+#auth .tabs button,.auth .tabs button{color:#ddd!important;}
+#auth .tabs button.active,.auth .tabs button.active{background:#c92332!important;color:#fff!important;box-shadow:none!important;}
+#auth .field label,.auth .field label{color:#ddd!important;}
+#auth .field input,#auth .field select,.auth .field input,.auth .field select{background:#111!important;border:1px solid #555!important;color:#fff!important;}
+#auth .btn,#auth .btn.full,.auth .btn,.auth .btn.full{background:#c92332!important;color:#fff!important;border:1px solid #e34b57!important;box-shadow:none!important;}
+#auth .btn.gray,.auth .btn.gray{background:#333!important;color:#fff!important;border-color:#555!important;}
+#auth .msg,.auth .msg{background:#222!important;border:1px solid #444!important;color:#eee!important;}
+#auth a{color:#ff6570!important;}
+#auth .logo small,.auth .logo small{color:#ff6570!important;}
+/* Garante que o conteúdo do cartão fique acima da camada escura */
+#auth .auth-card,.auth .auth-card{z-index:2;position:relative;}
 </style>
 </head>
 <body>
