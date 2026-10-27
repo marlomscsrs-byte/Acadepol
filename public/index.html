@@ -3417,6 +3417,23 @@ html,body,#app{background:#020a12!important;color:var(--cpi-text)!important}
   </div>
 </div>
 
+
+<style id="acadepol-dashboard-dedup-fix">
+/* Correção: remove painéis duplicados e recupera os atalhos rápidos clássicos. */
+#dashboard .academy-workspace-corrected{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important;align-items:stretch!important}
+#dashboard .academy-workspace-corrected .academy-upcoming{grid-column:1/-1!important;min-height:260px!important}
+#dashboard .academy-workspace-corrected .academy-actions{grid-column:1/-1!important;min-height:unset!important}
+#dashboard .academy-action-grid-restored{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:9px!important;padding:12px!important}
+#dashboard .academy-action-grid-restored button{display:grid!important;grid-template-columns:34px minmax(0,1fr) 16px!important;align-items:center!important;gap:9px!important;min-height:62px!important;padding:10px!important;text-align:left!important;background:#151515!important;border:1px solid #383838!important;border-radius:5px!important;color:#f5f5f5!important}
+#dashboard .academy-action-grid-restored button:hover{border-color:#e32636!important;background:#1b1b1b!important}
+#dashboard .academy-action-grid-restored .academy-action-no{display:flex!important;align-items:center!important;justify-content:center!important;width:32px!important;height:32px!important;border-radius:50%!important;background:#202020!important;border:1px solid #555!important;color:#ef3340!important;font-size:18px!important}
+#dashboard .academy-action-grid-restored button b{display:block!important;font-size:11px!important;color:#f5f5f5!important}
+#dashboard .academy-action-grid-restored button small{display:block!important;margin-top:4px!important;font-size:9px!important;color:#aaa!important}
+#dashboard .academy-action-grid-restored button i{font-style:normal!important;color:#ef3340!important;font-size:22px!important}
+@media(max-width:1050px){#dashboard .academy-action-grid-restored{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){#dashboard .academy-action-grid-restored{grid-template-columns:1fr!important}}
+</style>
+
 </body>
 <style id="cip-recognition-page">
 .recognition-hero{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;margin-bottom:14px;border:1px solid rgba(65,151,197,.24);border-radius:14px;background:linear-gradient(135deg,rgba(7,29,44,.96),rgba(4,16,27,.96));box-shadow:0 12px 30px rgba(0,0,0,.18)}
@@ -3788,6 +3805,83 @@ main{margin-left:244px!important;padding:20px 26px!important;max-width:none!impo
 @media(max-width:700px){#app .side{position:relative!important;width:100%!important;height:auto!important}#app .brand.brand-approved{min-height:unset!important;flex-direction:row!important;text-align:left!important;border-bottom:1px solid #333!important}#app .brand-logo{width:48px!important;height:48px!important;margin:0!important}#app .brand-copy b{font-size:16px!important}#app .nav{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}main{margin-left:0!important;padding:12px!important}.top{margin:-12px -12px 12px!important;padding:10px 12px!important}.top-right{flex-wrap:wrap!important}#dashboard .cpi-hero{min-height:240px!important}#dashboard .cpi-hero-copy{padding:22px 18px!important}#dashboard .cpi-hero:after{display:none!important}#dashboard .cpi-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}#dashboard .cpi-kpi{border-bottom:1px solid #333!important;min-height:90px!important;padding:12px!important}#dashboard .cpi-kpi:nth-child(2){border-right:0!important}#dashboard .cpi-kpi:nth-child(3),#dashboard .cpi-kpi:nth-child(4){border-bottom:0!important}#dashboard .cpi-shortcuts{grid-template-columns:1fr!important}}
 </style>
 
+
+<style id="acadepol-unique-academic-interface">
+:root{--academy-red:#ed233b;--academy-bg:#080808;--academy-surface:#101112;--academy-line:#343638;--academy-muted:#a3a6aa}
+#dashboard{padding:12px 16px 24px!important;background:#080808!important}
+#dashboard .cpi-hero{min-height:220px!important;border-radius:2px!important;border:1px solid #393b3d!important;margin:2px 0 12px!important;background-position:center 42%!important}
+#dashboard .cpi-hero-copy{padding:28px 26px!important}
+#dashboard .cpi-kpis{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:0!important;background:#101112!important;border:1px solid #343638!important;border-radius:2px!important;margin-bottom:14px!important;overflow:hidden!important}
+#dashboard .cpi-kpi{background:transparent!important;border:0!important;border-right:1px solid #343638!important;border-radius:0!important;box-shadow:none!important;min-height:90px!important;padding:15px 18px!important;display:flex!important;align-items:center!important}
+#dashboard .cpi-kpi:last-child{border-right:0!important}
+#dashboard .cpi-kpi .kpi-icon{border-radius:4px!important;width:44px!important;height:44px!important;background:#171819!important;border:1px solid #45484b!important;color:#ed233b!important}
+#dashboard .cpi-kpi .kpi-icon svg{stroke:#ed233b!important}
+#dashboard .cpi-kpi strong{font-size:29px!important;color:#fff!important}
+#dashboard .cpi-kpi b{font-size:10px!important;letter-spacing:.45px!important;text-transform:uppercase!important;color:#f0f0f0!important}
+#dashboard .cpi-kpi span{color:#9da0a3!important}
+#dashboard .academy-workspace{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(340px,.85fr);gap:12px;margin:0 0 14px}
+#dashboard .academy-surface{min-width:0;background:#0d0e0f;border:1px solid #343638;border-radius:2px;overflow:hidden;box-shadow:none}
+#dashboard .academy-journey{grid-column:1;grid-row:1;padding:20px 20px 0;display:flex;flex-direction:column;justify-content:space-between;min-height:290px;background:linear-gradient(135deg,#121314 0%,#0b0b0c 70%)}
+#dashboard .academy-section-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:20px}
+#dashboard .academy-section-heading.compact{align-items:center;margin-bottom:14px}
+#dashboard .academy-overline{display:block;font-size:9px;letter-spacing:2.1px;color:#ed233b;font-weight:800;margin-bottom:7px}
+#dashboard .academy-section-heading h2{margin:0;color:#f4f4f4;font-size:18px;line-height:1.15;font-weight:800;letter-spacing:-.25px}
+#dashboard .academy-section-heading p{margin:6px 0 0;color:#9da0a3;font-size:11px}
+#dashboard .academy-section-index{font-size:9px;letter-spacing:1.2px;color:#777b7f;white-space:nowrap;padding-top:3px}
+#dashboard .academy-stages{display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr);align-items:center;gap:4px;padding:6px 0 20px}
+#dashboard .academy-stage{position:relative;min-width:0;min-height:160px;padding:14px 13px 12px;border:1px solid #35383a;background:linear-gradient(150deg,#171819,#0d0e0f);display:flex;flex-direction:column;align-items:flex-start}
+#dashboard .academy-stage-number{font-size:8px;letter-spacing:1.6px;color:#ed233b;font-weight:800}
+#dashboard .academy-stage-symbol{font-size:30px;line-height:1.1;font-weight:800;letter-spacing:-1.5px;color:#f2f2f2;margin:13px 0 10px;border-bottom:2px solid #ed233b;padding-bottom:8px;min-width:36px}
+#dashboard .academy-stage h3{margin:0 0 7px;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.65px}
+#dashboard .academy-stage p{margin:0;color:#a2a5a8;font-size:10px;line-height:1.5}
+#dashboard .academy-stage-foot{margin-top:auto;padding-top:14px;font-size:7px;letter-spacing:1.15px;color:#686c70}
+#dashboard .academy-stage-connector{height:1px;background:#45484b;position:relative}
+#dashboard .academy-stage-connector span{position:absolute;width:7px;height:7px;top:-3px;left:50%;border:1px solid #ed233b;background:#0d0e0f;transform:rotate(45deg)}
+#dashboard .academy-journey-footer{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #292b2d;padding:11px 0;color:#73777a;font-size:8px;letter-spacing:1.2px}
+#dashboard .academy-journey-footer i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#ed233b;margin-right:7px}
+#dashboard .academy-upcoming{grid-column:2;grid-row:1;padding:20px 18px 0;display:flex;flex-direction:column;min-height:290px}
+#dashboard .academy-text-action{background:transparent;border:0;color:#ed233b;font-size:10px;white-space:nowrap;cursor:pointer}
+#dashboard .academy-text-action b{font-size:15px;margin-left:5px}
+#dashboard .academy-next-list{padding:0!important;flex:1}
+#dashboard .academy-next-list:empty:after{content:'Nenhuma atividade disponível para exibição.';display:block;color:#777b7f;font-size:11px;padding:20px 2px}
+#dashboard .academy-next-list .next-booking{border:0!important;border-bottom:1px solid #292b2d!important;background:transparent!important;border-radius:0!important;padding:10px 0!important}
+#dashboard .academy-next-list .next-date{border-radius:2px!important;background:#191a1b!important;border:1px solid #414447!important}
+#dashboard .academy-full-action{margin:0 -18px!important;width:calc(100% + 36px)!important;padding:14px 18px!important;display:flex!important;justify-content:space-between!important;background:#151617!important;border:0!important;border-top:1px solid #343638!important;color:#d8dadd!important;font-size:9px!important;letter-spacing:1.1px!important;text-align:left!important}
+#dashboard .academy-full-action span{color:#ed233b;font-size:15px}
+#dashboard .academy-indicators{grid-column:1/-1;padding:18px 20px 20px}
+#dashboard .academy-indicator-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid #303234}
+#dashboard .academy-indicator{display:flex;align-items:center;gap:11px;padding:13px 14px;min-width:0;border-right:1px solid #303234;background:#111213}
+#dashboard .academy-indicator:last-child{border-right:0}
+#dashboard .academy-indicator-mark{width:30px;height:30px;display:grid;place-items:center;border:1px solid #4b4e50;color:#ed233b;font-size:12px;font-weight:800;flex-shrink:0}
+#dashboard .academy-indicator div{display:flex;flex-direction:column;gap:4px;min-width:0}
+#dashboard .academy-indicator b{font-size:10px;color:#e9e9e9;line-height:1.3}
+#dashboard .academy-indicator small{font-size:9px;color:#85898c}
+#dashboard .academy-indicator strong{margin-left:auto;font-size:23px;color:#fff;font-weight:800}
+#dashboard .academy-actions{grid-column:1/-1;padding:18px 20px 20px}
+#dashboard .academy-action-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid #303234}
+#dashboard .academy-action-grid button{display:flex;align-items:center;gap:11px;min-width:0;text-align:left;padding:14px 12px;background:#111213;border:0;border-right:1px solid #303234;color:#fff;cursor:pointer}
+#dashboard .academy-action-grid button:last-child{border-right:0}
+#dashboard .academy-action-grid button:hover{background:#1b1113}
+#dashboard .academy-action-no{font-size:10px;color:#ed233b;letter-spacing:1px;font-weight:800;align-self:flex-start;padding-top:2px}
+#dashboard .academy-action-grid button>span:nth-child(2){display:flex;flex-direction:column;gap:5px;min-width:0}
+#dashboard .academy-action-grid b{font-size:10px;color:#f3f3f3}
+#dashboard .academy-action-grid small{font-size:9px;color:#92969a;line-height:1.3}
+#dashboard .academy-action-grid i{font-style:normal;color:#ed233b;margin-left:auto}
+#dashboard .cpi-week-panel{margin-top:12px!important;border-radius:2px!important;background:#0d0e0f!important;border:1px solid #343638!important}
+#dashboard .cpi-week-panel .cpi-panel-head{background:#111213!important;border-bottom:1px solid #343638!important}
+#dashboard .cpi-week-panel .cpi-panel-head h2{font-size:11px!important;letter-spacing:1.5px!important;text-transform:uppercase!important}
+#dashboard .cpi-calendar-wrap,#dashboard .cpi-cal{background:#0d0e0f!important}
+#dashboard .cpi-cal .day,#dashboard .cpi-cal .cal-day,#dashboard .cpi-cal>div{border-color:#303234!important}
+#dashboard .mini-btn{background:#151617!important;border:1px solid #424548!important;border-radius:2px!important;color:#e8e8e8!important}
+#dashboard .mini-btn:hover,#dashboard .mini-btn.active{border-color:#ed233b!important;color:#ed233b!important}
+/* Keep old components functional but prevent inherited blue/gold colorways on this page. */
+#dashboard .blue,#dashboard .gold,#dashboard .purple,#dashboard .green{--legacy-accent:#ed233b}
+#dashboard .cpi-kpi.blue .kpi-icon,#dashboard .cpi-kpi.gold .kpi-icon,#dashboard .cpi-kpi.purple .kpi-icon,#dashboard .cpi-kpi.green .kpi-icon{color:#ed233b!important;border-color:#555!important}
+#dashboard .cpi-kpi.blue .kpi-icon svg,#dashboard .cpi-kpi.gold .kpi-icon svg,#dashboard .cpi-kpi.purple .kpi-icon svg,#dashboard .cpi-kpi.green .kpi-icon svg{stroke:#ed233b!important}
+@media(max-width:1100px){#dashboard .academy-workspace{grid-template-columns:1fr}#dashboard .academy-journey,#dashboard .academy-upcoming{grid-column:1;grid-row:auto}#dashboard .academy-indicator-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#dashboard .academy-indicator:nth-child(2){border-right:0}#dashboard .academy-indicator:nth-child(-n+2){border-bottom:1px solid #303234}#dashboard .academy-action-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#dashboard .academy-action-grid button{border-bottom:1px solid #303234}#dashboard .academy-action-grid button:nth-child(2n){border-right:0}}
+@media(max-width:650px){#dashboard{padding:8px!important}#dashboard .cpi-hero{min-height:205px!important}#dashboard .cpi-hero-copy{padding:20px 16px!important}#dashboard .cpi-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}#dashboard .cpi-kpi:nth-child(2){border-right:0!important}#dashboard .cpi-kpi:nth-child(-n+2){border-bottom:1px solid #343638!important}#dashboard .academy-stages{grid-template-columns:1fr;gap:8px}#dashboard .academy-stage{min-height:0}#dashboard .academy-stage-connector{height:14px;width:1px;margin:auto}#dashboard .academy-stage-connector span{left:-3px;top:4px}#dashboard .academy-journey,#dashboard .academy-upcoming,#dashboard .academy-indicators,#dashboard .academy-actions{padding-left:12px;padding-right:12px}#dashboard .academy-indicator-grid{grid-template-columns:1fr}#dashboard .academy-indicator{border-right:0!important;border-bottom:1px solid #303234}#dashboard .academy-indicator:last-child{border-bottom:0}#dashboard .academy-action-grid{grid-template-columns:1fr}#dashboard .academy-action-grid button{border-right:0;border-bottom:1px solid #303234}#dashboard .academy-action-grid button:last-child{border-bottom:0}#dashboard .academy-section-index{display:none}}
+</style>
+
 </head>
 <body>
 <div id="auth" class="auth">
@@ -3979,62 +4073,24 @@ main{margin-left:244px!important;padding:20px 26px!important;max-width:none!impo
     </div>
   </div>
 
-  <div class="cpi-main-grid">
-    <div class="cpi-panel">
-      <div class="cpi-panel-head">
-        <h2><span class="dashboard-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path><path d="M12 14v4M10 16h4"></path></svg></span> PRÓXIMAS ATIVIDADES</h2>
-        <button class="cpi-outline-btn" type="button" onclick="go('marcacoes',this)">
-          Calendário completo →
-        </button>
-      </div>
-      <div class="cpi-next-list" id="nextList"></div>
-      <button class="cpi-bottom-link" type="button" onclick="go('marcacoes',this)">
-        Ver todas as atividades <span>→</span>
-      </button>
+  <section class="academy-workspace academy-workspace-corrected" aria-label="Central de formação">
+    <div class="academy-upcoming academy-surface">
+      <div class="academy-section-heading compact"><div><span class="academy-overline">AGENDA OPERACIONAL</span><h2>Próximas atividades</h2></div><button class="academy-text-action" type="button" onclick="go('marcacoes',this)">Ver agenda completa <b>↗</b></button></div>
+      <div id="nextList" class="cpi-next-list academy-next-list"></div>
+      <button class="academy-full-action" type="button" onclick="go('marcacoes',this)">VER TODAS AS MARCAÇÕES <span>→</span></button>
     </div>
-
-    <div class="cpi-panel">
-      <div class="cpi-panel-head">
-        <h2><span class="dashboard-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20V10M9 20V4M15 20v-7M21 20V7"></path><path d="M3 20h18"></path><path d="M4 8l5-3 5 2 6-5"></path></svg></span> PANORAMA ACADÊMICO</h2>
-        <span class="cpi-filter">Este mês⌄</span>
-      </div>
-      <div class="cpi-summary">
-        <div class="summary-line blue">
-          <div class="summary-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M8 7h8M8 11h8M8 15h5"></path></svg></div>
-          <div><b>Atividades registradas</b><span>Este mês</span></div>
-          <strong id="summaryMonth">0</strong>
-        </div>
-        <div class="summary-line green">
-          <div class="summary-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.7 2.7L16.5 9"></path></svg></div>
-          <div><b>Formações concluídas</b><span>Este mês</span></div>
-          <strong id="summaryCompleted">0</strong>
-        </div>
-        <div class="summary-line gold">
-          <div class="summary-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"></circle><path d="M2 21v-2a5 5 0 0 1 10 0v2"></path><path d="M16 11a4 4 0 0 0 0-8M16 14a5 5 0 0 1 5 5v2"></path></svg></div>
-          <div><b>Docentes ativos</b><span>No sistema</span></div>
-          <strong id="summaryActive">0</strong>
-        </div>
-        <div class="summary-line purple">
-          <div class="summary-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 0 4 22z"></path><path d="M4 5.5v14"></path><path d="M8 7h8M8 11h8"></path></svg></div>
-          <div><b>Programas disponíveis</b><span>A realizar</span></div>
-          <strong id="summaryCourses">0</strong>
-        </div>
+    <div class="academy-actions academy-surface">
+      <div class="academy-section-heading compact"><div><span class="academy-overline">FERRAMENTAS DE TRABALHO</span><h2>Atalhos rápidos</h2></div></div>
+      <div class="academy-action-grid academy-action-grid-restored">
+        <button type="button" onclick="openBooking()"><span class="academy-action-no">＋</span><span><b>Nova Marcação</b><small>Criar nova marcação de curso</small></span><i>›</i></button>
+        <button type="button" onclick="openUserModal()"><span class="academy-action-no">＋</span><span><b>Adicionar Instrutor</b><small>Cadastrar novo instrutor</small></span><i>›</i></button>
+        <button type="button" onclick="go('marcacoes',this)"><span class="academy-action-no">▦</span><span><b>Ver Agenda</b><small>Visualizar agenda completa</small></span><i>›</i></button>
+        <button type="button" onclick="go('resultados',this)"><span class="academy-action-no">▤</span><span><b>Resultados</b><small>Ver resultados dos cursos</small></span><i>›</i></button>
+        <button type="button" onclick="go('aprovacoes',this)"><span class="academy-action-no">✓</span><span><b>Aprovações</b><small>Gerenciar solicitações pendentes</small></span><i>›</i></button>
       </div>
     </div>
-
-    <div class="cpi-panel">
-      <div class="cpi-panel-head">
-        <h2><span class="dashboard-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 10-13h-7z"></path></svg></span> ACESSO DIRETO</h2>
-      </div>
-      <div class="cpi-shortcuts">
-        <button onclick="openBooking()"><span class="shortcut-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18M12 13v5M9.5 15.5h5"></path></svg></span><b>Agendar atividade</b><small>Planejar aula ou treinamento</small><i aria-hidden="true">›</i></button>
-        <button onclick="openUserModal()"><span class="shortcut-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"></circle><path d="M2 21v-2a5 5 0 0 1 10 0v2M19 8v6M16 11h6"></path></svg></span><b>Cadastrar docente</b><small>Gerenciar corpo docente</small><i aria-hidden="true">›</i></button>
-        <button type="button" onclick="go('marcacoes',this)"><span class="shortcut-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01"></path></svg></span><b>Agenda acadêmica</b><small>Consultar calendário</small><i aria-hidden="true">›</i></button>
-        <button type="button" onclick="go('resultados',this)"><span class="shortcut-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M8 7h8M8 11h5M8 15h8"></path></svg></span><b>Desempenho</b><small>Consultar avaliações</small><i aria-hidden="true">›</i></button>
-        <button type="button" onclick="go('aprovacoes',this)"><span class="shortcut-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="m8 12 2.5 2.5L16 9"></path></svg></span><b>Validações</b><small>Revisar solicitações</small><i aria-hidden="true">›</i></button>
-      </div>
-    </div>
-  </div>
+    <div hidden aria-hidden="true"><span id="summaryMonth">0</span><span id="summaryCompleted">0</span><span id="summaryActive">0</span><span id="summaryCourses">0</span></div>
+  </section>
 
   <div class="cpi-panel cpi-week-panel">
     <div class="cpi-panel-head">
@@ -7873,6 +7929,23 @@ function exportCourseParticipantsTableCSV(){
 @media(max-width:900px){.recognition-badges-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.recognition-badges-grid{grid-template-columns:1fr}.recognition-hero-badge{display:none}}
 </style>
+
+<style id="acadepol-dashboard-dedup-fix">
+/* Correção: remove painéis duplicados e recupera os atalhos rápidos clássicos. */
+#dashboard .academy-workspace-corrected{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important;align-items:stretch!important}
+#dashboard .academy-workspace-corrected .academy-upcoming{grid-column:1/-1!important;min-height:260px!important}
+#dashboard .academy-workspace-corrected .academy-actions{grid-column:1/-1!important;min-height:unset!important}
+#dashboard .academy-action-grid-restored{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:9px!important;padding:12px!important}
+#dashboard .academy-action-grid-restored button{display:grid!important;grid-template-columns:34px minmax(0,1fr) 16px!important;align-items:center!important;gap:9px!important;min-height:62px!important;padding:10px!important;text-align:left!important;background:#151515!important;border:1px solid #383838!important;border-radius:5px!important;color:#f5f5f5!important}
+#dashboard .academy-action-grid-restored button:hover{border-color:#e32636!important;background:#1b1b1b!important}
+#dashboard .academy-action-grid-restored .academy-action-no{display:flex!important;align-items:center!important;justify-content:center!important;width:32px!important;height:32px!important;border-radius:50%!important;background:#202020!important;border:1px solid #555!important;color:#ef3340!important;font-size:18px!important}
+#dashboard .academy-action-grid-restored button b{display:block!important;font-size:11px!important;color:#f5f5f5!important}
+#dashboard .academy-action-grid-restored button small{display:block!important;margin-top:4px!important;font-size:9px!important;color:#aaa!important}
+#dashboard .academy-action-grid-restored button i{font-style:normal!important;color:#ef3340!important;font-size:22px!important}
+@media(max-width:1050px){#dashboard .academy-action-grid-restored{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){#dashboard .academy-action-grid-restored{grid-template-columns:1fr!important}}
+</style>
+
 </body>
 
 
