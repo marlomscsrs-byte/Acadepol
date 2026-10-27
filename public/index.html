@@ -3416,6 +3416,7 @@ html,body,#app{background:#020a12!important;color:var(--cpi-text)!important}
     </div>
   </div>
 </div>
+
 </body>
 <style id="cip-recognition-page">
 .recognition-hero{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;margin-bottom:14px;border:1px solid rgba(65,151,197,.24);border-radius:14px;background:linear-gradient(135deg,rgba(7,29,44,.96),rgba(4,16,27,.96));box-shadow:0 12px 30px rgba(0,0,0,.18)}
@@ -3845,13 +3846,13 @@ body:before,body:after{background-color:transparent!important}
 <section id="dashboard" class="page active">
   <div class="cpi-hero">
     <div class="cpi-hero-copy">
-      <div class="cpi-eyebrow">SISTEMA DE GESTÃO</div>
+      <div class="cpi-eyebrow">CENTRAL DE FORMAÇÃO</div>
       <h1><span id="heroGreeting">Boa noite</span>, <span id="heroUserName">Usuário</span></h1>
       <p>Bem-vindo à ACADEPOL — Academia de Polícia.</p>
       <div class="cpi-gold-line"></div>
       <p class="cpi-description">
-        Aprimore sua formação, acompanhe treinamentos e fortaleça os resultados<br>
-        com disciplina, técnica e excelência.
+        Acompanhe a formação, as atividades acadêmicas e os resultados da academia<br>
+        Disciplina, conhecimento e excelência na formação policial.
       </p>
     </div>
     <img class="cpi-hero-logo" src="/academia-logo.png" alt="ACADEPOL — Academia de Polícia">
@@ -3862,7 +3863,7 @@ body:before,body:after{background-color:transparent!important}
       <div class="kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
       <div class="kpi-copy">
         <strong id="kActive">0</strong>
-        <b>Instrutores ativos</b>
+        <b>Equipe de instrutores</b>
         <span id="activeBreakdown">Equipe em atividade</span>
       </div>
     </div>
@@ -3870,7 +3871,7 @@ body:before,body:after{background-color:transparent!important}
       <div class="kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"></path></svg></div>
       <div class="kpi-copy">
         <strong id="kWeek">0</strong>
-        <b>Marcações da semana</b>
+        <b>Atividades da semana</b>
         <span id="weekBreakdown">Próximos compromissos</span>
       </div>
     </div>
@@ -3878,7 +3879,7 @@ body:before,body:after{background-color:transparent!important}
       <div class="kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 2h4M10 22h4"></path><path d="M8 2h8M8 22h8"></path><path d="M8 2c0 5 8 5 8 10s-8 5-8 10M16 2c0 5-8 5-8 10s8 5 8 10"></path></svg></div>
       <div class="kpi-copy">
         <strong id="kPendingAll">0</strong>
-        <b>Pendentes</b>
+        <b>Pendências de aprovação</b>
         <span>Aguardando aprovação</span>
       </div>
     </div>
@@ -3886,7 +3887,7 @@ body:before,body:after{background-color:transparent!important}
       <div class="kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"></path><path d="M7 16l4-5 3 3 6-8"></path><path d="M18 6h2v2"></path></svg></div>
       <div class="kpi-copy">
         <strong id="kCompleted">0</strong>
-        <b>Cursos realizados</b>
+        <b>Formações realizadas</b>
         <span id="completedBreakdown">Este mês</span>
       </div>
     </div>
@@ -7790,6 +7791,88 @@ function exportCourseParticipantsTableCSV(){
 </body>
 
 
+<style id="acadepol-own-identity-final">
+/* ACADEPOL — identidade própria / Central de Formação */
+:root{--gold:#f1263d!important;--cpi-gold:#f1263d!important;--cpi-blue:#d6d6d6!important;--blue:#d6d6d6!important;--cpi-red:#f1263d!important;--cpi-purple:#a9a9a9!important;--cpi-green:#bcbcbc!important;--bg:#080808!important;--panel:#111!important;--line:#343434!important;--text:#f5f5f5!important;--muted:#a3a3a3!important}
+body,#app,main{background:#080808!important;color:#f3f3f3!important}
+/* Navigation: restrained, monochrome with a red active marker */
+#app .sidebar,aside.sidebar,.sidebar{background:#090909!important;border-right:1px solid #303030!important}
+#app .nav button,#app .nav a,.nav button,.nav a{background:transparent!important;border:1px solid transparent!important;color:#bcbcbc!important;border-radius:4px!important;box-shadow:none!important}
+#app .nav button.active,#app .nav a.active,.nav button.active,.nav a.active{background:#171717!important;color:#fff!important;border-color:#424242!important;border-left:3px solid #f1263d!important}
+#app .nav-icon,#app .nav svg{color:#d5d5d5!important;stroke:#d5d5d5!important}
+/* Header */
+#app .top,main>.top{background:#090909!important;border-bottom:1px solid #333!important;box-shadow:none!important}
+#app .top h1,#app .top .unit-line{color:#f5f5f5!important}
+#app .top .date,#app .presence-btn,#app .notification-btn,#app .workspace-switcher,#app .top-profile{background:#141414!important;border:1px solid #383838!important;color:#eee!important;box-shadow:none!important}
+#app .workspace-switcher button{background:#151515!important;color:#ddd!important;border-color:#3a3a3a!important}
+#app .workspace-switcher button.active,#app .workspace-switcher button[aria-pressed=true]{background:#2a1014!important;color:#fff!important;border-color:#f1263d!important}
+/* Hero becomes a wide institutional masthead */
+#dashboard .cpi-hero{position:relative!important;min-height:248px!important;height:auto!important;overflow:hidden!important;border:1px solid #3a3a3a!important;border-radius:5px!important;background-color:#090909!important;background-image:linear-gradient(90deg,rgba(5,5,5,.94) 0%,rgba(5,5,5,.78) 34%,rgba(5,5,5,.12) 72%,rgba(5,5,5,.35) 100%),url('/academia-hero.png')!important;background-position:center!important;background-size:cover!important;margin:8px 0 14px!important;box-shadow:none!important}
+#dashboard .cpi-hero:after{content:"CENTRAL DE FORMAÇÃO  /  ACADEPOL";position:absolute;right:22px;bottom:18px;color:#ddd;font-size:10px;letter-spacing:3px;border-right:3px solid #f1263d;padding:8px 12px;opacity:.9}
+#dashboard .cpi-hero-copy{position:relative!important;z-index:2!important;padding:32px 28px!important;max-width:690px!important}
+#dashboard .cpi-eyebrow{color:#f1263d!important;letter-spacing:4px!important;font-size:10px!important;font-weight:800!important}
+#dashboard .cpi-hero h1{font-size:clamp(27px,2.4vw,40px)!important;letter-spacing:-1px!important;color:#fff!important;font-weight:800!important}
+#dashboard .cpi-hero h1 span:last-child{color:#f1263d!important}
+#dashboard .cpi-hero p{color:#d0d0d0!important}
+#dashboard .cpi-gold-line{background:#f1263d!important;width:58px!important;height:3px!important}
+#dashboard .cpi-hero-logo{display:none!important}
+/* KPI ribbon: shared monochrome system, red only as accent */
+#dashboard .cpi-kpis{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:0!important;border:1px solid #393939!important;background:#101010!important;margin:0 0 16px!important;border-radius:5px!important;overflow:hidden!important}
+#dashboard .cpi-kpi{min-height:108px!important;display:flex!important;align-items:center!important;gap:15px!important;padding:20px!important;background:transparent!important;border:0!important;border-right:1px solid #333!important;border-radius:0!important;box-shadow:none!important;color:#f1263d!important}
+#dashboard .cpi-kpi:last-child{border-right:0!important}
+#dashboard .cpi-kpi .kpi-icon{width:54px!important;height:54px!important;border:1px solid #7b2630!important;background:#1a1113!important;color:#f1263d!important;border-radius:50%!important}
+#dashboard .cpi-kpi .kpi-icon svg{stroke:#f1263d!important}
+#dashboard .cpi-kpi strong{font-size:32px!important;letter-spacing:-1px!important;color:#fff!important}
+#dashboard .cpi-kpi b{font-size:11px!important;letter-spacing:.7px!important;text-transform:uppercase!important;color:#eee!important}
+#dashboard .cpi-kpi span{font-size:10px!important;color:#969696!important}
+/* Dashboard content grid becomes editorial, not three equal legacy cards */
+#dashboard .cpi-main-grid{display:grid!important;grid-template-columns:minmax(0,1.55fr) minmax(270px,.9fr)!important;gap:14px!important;margin-top:0!important}
+#dashboard .cpi-main-grid>.cpi-panel{background:#0d0d0d!important;border:1px solid #343434!important;border-radius:5px!important;box-shadow:none!important;overflow:hidden!important}
+#dashboard .cpi-main-grid>.cpi-panel:first-child{grid-column:1!important;grid-row:1!important;min-height:330px!important}
+#dashboard .cpi-main-grid>.cpi-panel:nth-child(2){grid-column:2!important;grid-row:1!important;min-height:330px!important}
+#dashboard .cpi-main-grid>.cpi-panel:nth-child(3){grid-column:1/-1!important;grid-row:2!important}
+#dashboard .cpi-panel-head{min-height:54px!important;padding:0 18px!important;background:#111!important;border-bottom:1px solid #343434!important}
+#dashboard .cpi-panel-head h2{font-size:11px!important;letter-spacing:1.4px!important;text-transform:uppercase!important;color:#f2f2f2!important}
+#dashboard .dashboard-title-icon,#dashboard .dashboard-title-icon svg{color:#f1263d!important;stroke:#f1263d!important}
+#dashboard .cpi-outline-btn,#dashboard .cpi-bottom-link,#dashboard .cpi-filter{border-color:#454545!important;background:#171717!important;color:#f1263d!important;border-radius:3px!important;box-shadow:none!important}
+#dashboard .cpi-next-list{padding:8px 16px!important}
+#dashboard .cpi-next-row{border-bottom:1px solid #292929!important;background:transparent!important}
+#dashboard .cpi-next-row:hover{background:#171717!important}
+#dashboard .cpi-next-date{background:#171717!important;border:1px solid #444!important;color:#fff!important}
+#dashboard .cpi-next-date strong,#dashboard .cpi-next-date b{color:#f1263d!important}
+#dashboard .cpi-next-row .status,#dashboard .cpi-next-row .badge{background:#241014!important;color:#ff6374!important;border:1px solid #67232c!important}
+#dashboard .cpi-summary{padding:10px!important;gap:7px!important}
+#dashboard .summary-line{background:#151515!important;border:1px solid #333!important;border-radius:4px!important;color:#ddd!important}
+#dashboard .summary-icon{background:#1b1b1b!important;border-color:#555!important;color:#f1263d!important}
+#dashboard .summary-icon svg{stroke:#f1263d!important}
+#dashboard .summary-line strong{color:#fff!important}
+#dashboard .summary-line.blue,#dashboard .summary-line.green,#dashboard .summary-line.gold,#dashboard .summary-line.purple{color:#f1263d!important}
+#dashboard .cpi-shortcuts{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:8px!important;padding:12px!important}
+#dashboard .cpi-shortcuts button{min-height:84px!important;position:relative!important;display:grid!important;grid-template-columns:36px 1fr!important;grid-template-rows:auto auto!important;align-content:center!important;column-gap:10px!important;padding:12px!important;background:#151515!important;border:1px solid #383838!important;border-radius:4px!important;text-align:left!important;box-shadow:none!important;color:#fff!important}
+#dashboard .cpi-shortcuts button:hover{border-color:#f1263d!important;background:#1b1113!important;transform:translateY(-1px)!important}
+#dashboard .cpi-shortcuts .shortcut-icon{grid-row:1/3!important;width:34px!important;height:34px!important;border-radius:50%!important;background:#201114!important;border:1px solid #6b2730!important;color:#f1263d!important}
+#dashboard .cpi-shortcuts .shortcut-icon svg{stroke:#f1263d!important}
+#dashboard .cpi-shortcuts button b{font-size:10px!important;color:#fff!important}
+#dashboard .cpi-shortcuts button small{font-size:9px!important;color:#aaa!important}
+#dashboard .cpi-shortcuts button i{display:none!important}
+#dashboard .cpi-bottom-link{border-top:1px solid #333!important;background:#101010!important}
+/* Weekly schedule: sober academic planner */
+#dashboard .cpi-week-panel{margin-top:14px!important;background:#0d0d0d!important;border:1px solid #343434!important;border-radius:5px!important}
+#dashboard .cpi-week-panel .cpi-panel-head{background:#111!important}
+#dashboard .cpi-cal,.cpi-calendar-wrap{background:#0d0d0d!important}
+#dashboard .cpi-cal .day,.cpi-cal .cal-day,.cpi-cal>div{border-color:#303030!important}
+#dashboard .mini-btn{background:#171717!important;border:1px solid #444!important;color:#eee!important;border-radius:3px!important}
+#dashboard .mini-btn:hover,#dashboard .mini-btn.active{border-color:#f1263d!important;color:#f1263d!important}
+#dashboard .cpi-calendar-wrap .event,#dashboard .cpi-cal .event{background:#211114!important;border-left:2px solid #f1263d!important;color:#eee!important}
+/* Remove inherited blue/gold accenting across the rest of the ACADEPOL UI */
+#app .btn.gold,#app button.gold,#app .btn.primary,#app .quick-action,#app .quick-actions a{background:#1a1113!important;border-color:#6b2730!important;color:#f4f4f4!important;box-shadow:none!important}
+#app .btn.gold:hover,#app button.gold:hover,#app .btn.primary:hover,#app .quick-action:hover,#app .quick-actions a:hover{background:#2a1115!important;border-color:#f1263d!important}
+#app .gold-symbol,#app .eyebrow,#app .cpi-gold-line{color:#f1263d!important}
+#app .panel,#app .card,.panel,.card{box-shadow:none!important}
+@media(max-width:1100px){#dashboard .cpi-main-grid{grid-template-columns:1fr!important}#dashboard .cpi-main-grid>.cpi-panel:first-child,#dashboard .cpi-main-grid>.cpi-panel:nth-child(2),#dashboard .cpi-main-grid>.cpi-panel:nth-child(3){grid-column:1!important;grid-row:auto!important}#dashboard .cpi-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:700px){#dashboard .cpi-hero{min-height:220px!important}#dashboard .cpi-hero-copy{padding:24px 18px!important}#dashboard .cpi-hero:after{display:none!important}#dashboard .cpi-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}#dashboard .cpi-kpi{border-bottom:1px solid #333!important;min-height:90px!important;padding:12px!important}#dashboard .cpi-kpi:nth-child(2){border-right:0!important}#dashboard .cpi-kpi:nth-child(3),#dashboard .cpi-kpi:nth-child(4){border-bottom:0!important}#dashboard .cpi-shortcuts{grid-template-columns:1fr!important}}
+
+</style>
 </html>
 <style id="v28-sidebar-final-user-reference">
 /* V28 — ajuste pontual: cabeçalho da sidebar conforme referência enviada */
