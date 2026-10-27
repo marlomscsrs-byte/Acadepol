@@ -3142,11 +3142,11 @@ app.post("/api/auth/register", async (req, res) => {
     if (password.length < 6)
       return res.status(400).json({ error: "A senha precisa ter pelo menos 6 caracteres." });
     const cleanCityId = String(city_id).trim();
-    const cleanCityPhone = String(city_phone).replace(/\D/g, "");
-    if (!/^\d+$/.test(cleanCityId))
-      return res.status(400).json({ error: "O ID na cidade deve conter apenas números." });
-    if (!/^\d{6}$/.test(cleanCityPhone))
-      return res.status(400).json({ error: "O telefone da cidade deve estar no formato 000-000." });
+    const cleanCityPhone = String(city_phone).trim();
+    if (!/^[a-zA-Z0-9-]{1,32}$/.test(cleanCityId))
+      return res.status(400).json({ error: "O ID deve conter de 1 a 32 letras, números ou hífen, sem espaços." });
+    if (!/^[a-zA-Z0-9-]{1,32}$/.test(cleanCityPhone))
+      return res.status(400).json({ error: "O telefone/código deve conter de 1 a 32 letras, números ou hífen, sem espaços." });
 
     const normalizedUsername = username.trim().toLowerCase();
     if (!/^[a-z0-9._-]{3,30}$/.test(normalizedUsername))
@@ -3288,10 +3288,10 @@ app.put("/api/me", auth, async (req,res) => {
     if (!cleanName) return res.status(400).json({error:"O nome é obrigatório."});
     if (cleanName.length > 120) return res.status(400).json({error:"O nome é muito longo."});
     if (discord && String(discord).length > 120) return res.status(400).json({error:"O Discord é muito longo."});
-    const cleanCityId = String(city_id ?? "").replace(/\D/g, "").trim();
-    const cleanCityPhone = String(city_phone ?? "").replace(/\D/g, "").trim();
-    if (!/^\d+$/.test(cleanCityId)) return res.status(400).json({error:"O ID na cidade deve conter apenas números."});
-    if (!/^\d{6}$/.test(cleanCityPhone)) return res.status(400).json({error:"O telefone da cidade deve estar no formato 000-000."});
+    const cleanCityId = String(city_id ?? "").trim();
+    const cleanCityPhone = String(city_phone ?? "").trim();
+    if (!/^[a-zA-Z0-9-]{1,32}$/.test(cleanCityId)) return res.status(400).json({error:"O ID deve conter de 1 a 32 letras, números ou hífen, sem espaços."});
+    if (!/^[a-zA-Z0-9-]{1,32}$/.test(cleanCityPhone)) return res.status(400).json({error:"O telefone/código deve conter de 1 a 32 letras, números ou hífen, sem espaços."});
 
     const allowedRanks = ["Sd.","Cb.","3º Sgt.","2º Sgt.","1º Sgt.","STen.","2º Ten.","1º Ten.","Cap.","Maj.","Ten.-Cel.","Cel.","Coronel","Outro"];
     const cleanRank = allowedRanks.includes(rank) ? rank : "Sd.";
@@ -4343,10 +4343,10 @@ app.patch("/api/admin/users/:id/profile", auth, managerAuth, coordinator, async 
     const id = Number(req.params.id);
     const { name, username, rank, discord, city_id, city_phone, role } = req.body || {};
     if (!name || !username) return res.status(400).json({error:"Nome e usuário são obrigatórios."});
-    const cleanCityId = city_id === undefined ? null : String(city_id).replace(/\D/g, "").trim();
-    const cleanCityPhone = city_phone === undefined ? null : String(city_phone).replace(/\D/g, "").trim();
-    if (city_id !== undefined && !/^\d+$/.test(cleanCityId)) return res.status(400).json({error:"O ID na cidade deve conter apenas números."});
-    if (city_phone !== undefined && !/^\d{6}$/.test(cleanCityPhone)) return res.status(400).json({error:"O telefone da cidade deve estar no formato 000-000."});
+    const cleanCityId = city_id === undefined ? null : String(city_id).trim();
+    const cleanCityPhone = city_phone === undefined ? null : String(city_phone).trim();
+    if (city_id !== undefined && !/^[a-zA-Z0-9-]{1,32}$/.test(cleanCityId)) return res.status(400).json({error:"O ID deve conter de 1 a 32 letras, números ou hífen, sem espaços."});
+    if (city_phone !== undefined && !/^[a-zA-Z0-9-]{1,32}$/.test(cleanCityPhone)) return res.status(400).json({error:"O telefone/código deve conter de 1 a 32 letras, números ou hífen, sem espaços."});
     if (role !== undefined && !["instrutor","coordenador","coordenador_instrucao","coordenador_recrutamentos","recrutador","instrutor_recrutador"].includes(role)) return res.status(400).json({error:"Cargo inválido."});
     const normalizedUsername = username.trim().toLowerCase();
     if (!/^[a-z0-9._-]{3,30}$/.test(normalizedUsername))
@@ -5773,7 +5773,7 @@ app.post('/api/recruitments/:id/transfer-participants', auth, recruitmentGuard, 
  }catch(e){console.error('POST transferência de conscritos:',e);res.status(500).json({error:e.message||'Não foi possível transferir os conscritos.'});}
 });
 app.post('/api/recruitments/:id/participants', auth, recruitmentGuard, async(req,res)=>{
- const id=Number(req.params.id), name=String(req.body?.name||'').trim(), cityId=String(req.body?.city_id||'').replace(/\D/g,''); if(!name||!cityId)return res.status(400).json({error:'Informe nome e ID/passaporte do conscrito.'});
+ const id=Number(req.params.id), name=String(req.body?.name||'').trim(), cityId=String(req.body?.city_id||'').trim(); if(!name||! /^[a-zA-Z0-9-]{1,32}$/.test(cityId))return res.status(400).json({error:'Informe nome e um ID/passaporte com letras e números (hífen opcional).'});
  try{const r=await query(`INSERT INTO cip_recruitment_participants(recruitment_id,name,city_id) VALUES($1,$2,$3) RETURNING id,name,city_id,status,score`,[id,name,cityId]);res.json({ok:true,participant:r.rows[0]})}catch(e){if(e.code==='23505')return res.status(409).json({error:'Este conscrito já está neste recrutamento.'});console.error(e);res.status(500).json({error:'Não foi possível inserir o conscrito.'})}
 });
 app.delete('/api/recruitments/participants/:id', auth, recruitmentGuard, async(req,res)=>{await query('DELETE FROM cip_recruitment_participants WHERE id=$1',[Number(req.params.id)]);res.json({ok:true})});
@@ -5851,8 +5851,8 @@ app.post('/api/recruitments/participants/:id/edit-identity', auth, recruitmentGu
  if(!isRecruitmentCoordinatorRole(req.currentUser.role))return res.status(403).json({error:'Somente Coordenador, Coordenador de Instrução, Coordenador de Recrutamentos ou Administrador pode editar dados após a aprovação.'});
  const id=Number(req.params.id);
  const newName=String(req.body?.name||'').trim();
- const newCityId=String(req.body?.city_id||'').replace(/\D/g,'').trim();
- if(!newName||!newCityId)return res.status(400).json({error:'Informe o nome e o ID/passaporte.'});
+ const newCityId=String(req.body?.city_id||'').trim();
+ if(!newName||! /^[a-zA-Z0-9-]{1,32}$/.test(newCityId))return res.status(400).json({error:'Informe o nome e um ID/passaporte com letras e números (hífen opcional).'});
  if(newName.length>120)return res.status(400).json({error:'O nome é muito longo.'});
  const client=await pool.connect();
  try{

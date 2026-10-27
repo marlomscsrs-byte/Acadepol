@@ -3720,8 +3720,8 @@ body:before,body:after{background-color:transparent!important}
       <h1>Criar cadastro</h1><p class="muted">O acesso será liberado após aprovação de um coordenador.</p>
       <div class="field"><label>Nome completo</label><input id="rname" placeholder="Seu nome"></div>
       <div class="register-grid">
-        <div class="field"><label>ID na cidade</label><input id="rcityid" inputmode="numeric" maxlength="12" placeholder="Digite seu ID"></div>
-        <div class="field"><label>Telefone da cidade</label><input id="rcityphone" inputmode="numeric" maxlength="7" placeholder="000-000"></div>
+        <div class="field"><label>ID na cidade</label><input id="rcityid" type="text" maxlength="32" autocomplete="off" placeholder="Ex.: AB123 ou 123ABC"></div>
+        <div class="field"><label>Telefone da cidade</label><input id="rcityphone" type="text" maxlength="32" autocomplete="off" placeholder="Telefone/código (letras e números)"></div>
       </div>
       <div class="field"><label>Usuário</label><input id="rusername" type="text" placeholder="seu.usuario" maxlength="30"></div>
       <div class="field"><label>Senha</label><input id="rpass" type="password" placeholder="Mínimo 6 caracteres"></div>
@@ -4370,8 +4370,8 @@ body:before,body:after{background-color:transparent!important}
             <div class="field"><label>Nome completo</label><input id="profileName" maxlength="120" placeholder="Seu nome"></div>
             <div class="field"><label>Função</label><input id="profileRole" readonly></div>
             <div class="field"><label>Usuário</label><input id="profileUsername" readonly></div>
-            <div class="field"><label>ID na cidade</label><input id="profileCityId" inputmode="numeric" maxlength="12" placeholder="Digite seu ID"></div>
-            <div class="field"><label>Telefone da cidade</label><input id="profileCityPhone" inputmode="numeric" maxlength="7" placeholder="000-000"></div>
+            <div class="field"><label>ID na cidade</label><input id="profileCityId" type="text" maxlength="32" autocomplete="off" placeholder="Ex.: AB123 ou 123ABC"></div>
+            <div class="field"><label>Telefone da cidade</label><input id="profileCityPhone" type="text" maxlength="32" autocomplete="off" placeholder="Telefone/código (letras e números)"></div>
             <div class="field"><label>Patente</label><select id="profileRank"><option>Sd.</option><option>Cb.</option><option>3º Sgt.</option><option>2º Sgt.</option><option>1º Sgt.</option><option>STen.</option><option>2º Ten.</option><option>1º Ten.</option><option>Cap.</option><option>Maj.</option><option>Ten.-Cel.</option><option>Cel.</option><option>Coronel</option><option>Outro</option></select></div>
             <div class="field full-field"><label>Discord <span class="muted">(opcional)</span></label><input id="profileDiscord" maxlength="120" placeholder="@usuario"></div>
             <div class="field full-field"><label>Twitch <span class="muted">(opcional)</span></label><input id="profileTwitch" maxlength="120" placeholder="https://www.twitch.tv/seucanal"><small class="profile-preference-help">Informe seu canal da Twitch. O sistema usa este canal para detectar quando você entrar ao vivo.</small></div>
@@ -4425,8 +4425,8 @@ body:before,body:after{background-color:transparent!important}
             <div class="field"><label>Nome completo</label><input id="recruitmentProfileName" maxlength="120" placeholder="Seu nome"></div>
             <div class="field"><label>Função</label><input id="recruitmentProfileRole" readonly></div>
             <div class="field"><label>Usuário</label><input id="recruitmentProfileUsername" readonly></div>
-            <div class="field"><label>ID na cidade</label><input id="recruitmentProfileCityId" inputmode="numeric" maxlength="12" placeholder="Digite seu ID"></div>
-            <div class="field"><label>Telefone da cidade</label><input id="recruitmentProfileCityPhone" inputmode="numeric" maxlength="7" placeholder="000-000"></div>
+            <div class="field"><label>ID na cidade</label><input id="recruitmentProfileCityId" type="text" maxlength="32" autocomplete="off" placeholder="Ex.: AB123 ou 123ABC"></div>
+            <div class="field"><label>Telefone da cidade</label><input id="recruitmentProfileCityPhone" type="text" maxlength="32" autocomplete="off" placeholder="Telefone/código (letras e números)"></div>
             <div class="field"><label>Patente</label><select id="recruitmentProfileRank"><option>Sd.</option><option>Cb.</option><option>3º Sgt.</option><option>2º Sgt.</option><option>1º Sgt.</option><option>STen.</option><option>2º Ten.</option><option>1º Ten.</option><option>Cap.</option><option>Maj.</option><option>Ten.-Cel.</option><option>Cel.</option><option>Coronel</option><option>Outro</option></select></div>
             <div class="field full-field"><label>Discord <span class="muted">(opcional)</span></label><input id="recruitmentProfileDiscord" maxlength="120" placeholder="@usuario"></div>
             <div class="field full-field"><label>Preferências de notificações</label><select id="recruitmentProfileNotificationPreference"><option value="all">Receber notificações de aprovações e marcações</option><option value="critical">Somente notificações críticas</option><option value="none">Não receber notificações</option></select><small class="profile-preference-help">Você pode alterar esta opção a qualquer momento.</small></div>
@@ -4696,8 +4696,8 @@ body:before,body:after{background-color:transparent!important}
       <div class="field"><label>Nome completo</label><input id="euName"></div>
       <div class="field"><label>Usuário</label><input id="euUsername" maxlength="30"></div>
       <div class="admin-user-two">
-        <div class="field"><label>ID na cidade</label><input id="euCityId" inputmode="numeric"></div>
-        <div class="field"><label>Telefone da cidade</label><input id="euCityPhone" inputmode="numeric" maxlength="7" placeholder="000-000"></div>
+        <div class="field"><label>ID na cidade</label><input id="euCityId" type="text" maxlength="32" autocomplete="off" placeholder="ID com letras e números"></div>
+        <div class="field"><label>Telefone da cidade</label><input id="euCityPhone" type="text" maxlength="32" autocomplete="off" placeholder="Telefone/código alfanumérico"></div>
       </div>
       <div class="admin-user-two">
         <div class="field"><label>Patente</label><select id="euRank"><option>Sd.</option><option>Cb.</option><option>3º Sgt.</option><option>2º Sgt.</option><option>1º Sgt.</option><option>STen.</option><option>2º Ten.</option><option>1º Ten.</option><option>Cap.</option><option>Maj.</option><option>Ten.-Cel.</option><option>Cel.</option><option>Coronel</option><option>Outro</option></select></div>
@@ -4945,9 +4945,11 @@ document.addEventListener("click",function(ev){
   openAdminResetPassword(btn.dataset.resetRequest,btn.dataset.resetName);
 });
 
-function maskCityPhone(el){let v=String(el.value||"").replace(/\D/g,"").slice(0,6);el.value=v.length>3?v.slice(0,3)+"-"+v.slice(3):v}
-async function register(){try{const cityId=$("rcityid").value.replace(/\D/g,"");const cityPhone=$("rcityphone").value.replace(/\D/g,"");if(!/^\d+$/.test(cityId))throw Error("Informe um ID na cidade válido.");if(!/^\d{6}$/.test(cityPhone))throw Error("Informe o telefone da cidade no formato 000-000.");const d=await api("/api/auth/register",{method:"POST",body:JSON.stringify({name:$("rname").value,username:$("rusername").value,password:$("rpass").value,discord:$("rdiscord").value,city_id:cityId,city_phone:cityPhone})});$("regMsg").textContent=d.message;$("regMsg").classList.remove("hidden")}catch(e){$("regMsg").textContent=e.message;$("regMsg").classList.remove("hidden")}}
-$("rcityid").addEventListener("input",e=>{e.target.value=e.target.value.replace(/\D/g,"")});$("rcityphone").addEventListener("input",e=>maskCityPhone(e.target));
+function cleanAlphanumericField(value){return String(value||"").replace(/[^a-zA-Z0-9-]/g,"").slice(0,32)}
+function formatCityPhone(value){const v=String(value||"").trim();return /^\d{6}$/.test(v)?v.slice(0,3)+"-"+v.slice(3):v}
+function bindAlphanumericField(id){const el=$(id);if(!el||el.dataset.alphanumericBound)return;el.dataset.alphanumericBound="1";el.addEventListener("input",()=>{const start=el.selectionStart;const before=el.value;const clean=cleanAlphanumericField(before);if(clean!==before){el.value=clean;try{el.setSelectionRange(start,start)}catch(_){}}})}
+async function register(){try{const cityId=cleanAlphanumericField($("rcityid").value).trim();const cityPhone=cleanAlphanumericField($("rcityphone").value).trim();if(!/^[a-zA-Z0-9-]{1,32}$/.test(cityId))throw Error("Informe um ID com letras e números.");if(!/^[a-zA-Z0-9-]{1,32}$/.test(cityPhone))throw Error("Informe um telefone/código com letras e números.");const d=await api("/api/auth/register",{method:"POST",body:JSON.stringify({name:$("rname").value,username:$("rusername").value,password:$("rpass").value,discord:$("rdiscord").value,city_id:cityId,city_phone:cityPhone})});$("regMsg").textContent=d.message;$("regMsg").classList.remove("hidden")}catch(e){$("regMsg").textContent=e.message;$("regMsg").classList.remove("hidden")}}
+bindAlphanumericField("rcityid");bindAlphanumericField("rcityphone");
 
 async function submitForcedPasswordChange(){
   const p1=$("forceNewPassword").value;
@@ -5291,15 +5293,12 @@ function renderAvatarElement(el, data, name){
 function renderMeAvatar(data){
   renderAvatarElement($("meAvatar"),data,me?.name);
 }
-function formatCityPhone(value){
-  const digits=String(value||"").replace(/\D/g,"").slice(0,6);
-  if(digits.length<=3)return digits;
-  return digits.slice(0,3)+"-"+digits.slice(3);
-}
-function bindAdminUserPhoneMask(){const el=$("euCityPhone");if(!el||el.dataset.masked)return;el.dataset.masked="1";el.addEventListener("input",()=>{let v=el.value.replace(/\D/g,"").slice(0,6);el.value=v.length>3?v.slice(0,3)+"-"+v.slice(3):v})}
+function bindAdminUserPhoneMask(){bindAlphanumericField("euCityPhone")}
 
-$("profileCityPhone")?.addEventListener("input",e=>{e.target.value=formatCityPhone(e.target.value)});
-$("profileCityId")?.addEventListener("input",e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,12)});
+$("profileCityPhone")?.addEventListener("input",e=>{e.target.value=cleanAlphanumericField(e.target.value)});
+$("profileCityId")?.addEventListener("input",e=>{e.target.value=cleanAlphanumericField(e.target.value)});
+$("recruitmentProfileCityPhone")?.addEventListener("input",e=>{e.target.value=cleanAlphanumericField(e.target.value)});
+$("recruitmentProfileCityId")?.addEventListener("input",e=>{e.target.value=cleanAlphanumericField(e.target.value)});
 async function loadProfile(){
   try{
     const p=await api("/api/me");
@@ -5386,13 +5385,13 @@ function handleRecruitmentProfilePhoto(event){
 }
 async function saveRecruitmentProfile(removePhoto=false){
   const name=$("recruitmentProfileName").value.trim();
-  const city_id=$("recruitmentProfileCityId").value.replace(/\D/g,"").trim();
-  const city_phone=$("recruitmentProfileCityPhone").value.replace(/\D/g,"").trim();
+  const city_id=cleanAlphanumericField($("recruitmentProfileCityId").value).trim();
+  const city_phone=cleanAlphanumericField($("recruitmentProfileCityPhone").value).trim();
   const discord=$("recruitmentProfileDiscord").value.trim(); const rank=$("recruitmentProfileRank").value;
   const notification_preference=$("recruitmentProfileNotificationPreference").value;
   const password=$("recruitmentProfilePassword").value; const confirmation=$("recruitmentProfilePasswordConfirm").value;
-  if(!/^\d+$/.test(city_id)){alert("Informe um ID na cidade válido.");return}
-  if(!/^\d{6}$/.test(city_phone)){alert("Informe o telefone da cidade no formato 000-000.");return}
+  if(!/^[a-zA-Z0-9-]{1,32}$/.test(city_id)){alert("Informe um ID com letras e números.");return}
+  if(!/^[a-zA-Z0-9-]{1,32}$/.test(city_phone)){alert("Informe um telefone/código com letras e números.");return}
   if(!name){alert("Informe seu nome.");return}
   if(password&&password.length<6){alert("A nova senha precisa ter pelo menos 6 caracteres.");return}
   if(password!==confirmation){alert("As senhas não conferem.");return}
@@ -5440,14 +5439,14 @@ async function handleProfilePhoto(event){
 }
 async function saveProfile(removePhoto=false){
   const name=$("profileName").value.trim();
-  const city_id=$("profileCityId").value.replace(/\D/g,"").trim();
-  const city_phone=$("profileCityPhone").value.replace(/\D/g,"").trim();
+  const city_id=cleanAlphanumericField($("profileCityId").value).trim();
+  const city_phone=cleanAlphanumericField($("profileCityPhone").value).trim();
   const discord=$("profileDiscord").value.trim();
   const twitch_channel=$("profileTwitch").value.trim();
   const twitch_enabled=$("profileTwitchEnabled").checked;
   const rank=$("profileRank").value;
-  if(!/^\d+$/.test(city_id)){alert("Informe um ID na cidade válido.");return}
-  if(!/^\d{6}$/.test(city_phone)){alert("Informe o telefone da cidade no formato 000-000.");return}
+  if(!/^[a-zA-Z0-9-]{1,32}$/.test(city_id)){alert("Informe um ID com letras e números.");return}
+  if(!/^[a-zA-Z0-9-]{1,32}$/.test(city_phone)){alert("Informe um telefone/código com letras e números.");return}
   const notification_preference=$("profileNotificationPreference").value;
   const password=$("profilePassword").value;
   const confirmation=$("profilePasswordConfirm").value;
@@ -6773,7 +6772,7 @@ async function editUser(id){
   const x=instructorRows.find(u=>Number(u.id)===Number(id));
   if(!x) return alert("Usuário não encontrado na lista.");
   adminEditingUserId=Number(id);
-  bindAdminUserPhoneMask();
+  bindAdminUserPhoneMask();bindAlphanumericField("euCityId");
   $("adminUserEditTitle").textContent=`Editar ${x.role==="admin"?"administrador":"instrutor"}`;
   $("adminUserEditSubtitle").textContent=`@${x.username||"—"} · dados completos da conta`;
   $("adminUserName").textContent=x.name||"—";
@@ -6798,10 +6797,10 @@ function closeAdminUserModal(){adminEditingUserId=null;$("adminUserEditModal").c
 async function saveAdminUserProfile(){
   if(!adminEditingUserId)return;
   try{
-    const cityId=$("euCityId").value.replace(/\D/g,"");
-    const cityPhone=$("euCityPhone").value.replace(/\D/g,"");
-    if(!/^\d+$/.test(cityId))throw Error("Informe um ID na cidade válido.");
-    if(!/^\d{6}$/.test(cityPhone))throw Error("Informe o telefone da cidade no formato 000-000.");
+    const cityId=cleanAlphanumericField($("euCityId").value).trim();
+    const cityPhone=cleanAlphanumericField($("euCityPhone").value).trim();
+    if(!/^[a-zA-Z0-9-]{1,32}$/.test(cityId))throw Error("Informe um ID com letras e números.");
+    if(!/^[a-zA-Z0-9-]{1,32}$/.test(cityPhone))throw Error("Informe um telefone/código com letras e números.");
     const body={name:$("euName").value.trim(),username:$("euUsername").value.trim(),rank:$("euRank").value,discord:$("euDiscord").value.trim(),city_id:cityId,city_phone:cityPhone};
     if(!$("euRole").disabled)body.role=$("euRole").value;
     await api("/api/admin/users/"+adminEditingUserId+"/profile",{method:"PATCH",body:JSON.stringify(body)});
@@ -8513,7 +8512,7 @@ async function transferSelectedRecruitmentParticipants(sourceId){
   }catch(e){alert(e.message||'Não foi possível transferir os conscritos.')}
 }
 
-async function openRecruitmentResults(id){const r=recruitmentCache.find(x=>Number(x.id)===Number(id));if(!r)return;const ps=await api(`/api/recruitments/${id}/participants`);const total=ps.length;const done=ps.filter(p=>p.proof_completed||['submitted','approved','rejected'].includes(String(p.status||''))).length;const allDone=total>0&&done===total;const alreadySent=ps.some(p=>['submitted','approved','rejected'].includes(String(p.status||'')));const sendLabel=alreadySent?'Provas enviadas para aprovação':'Enviar provas para aprovação';showRecruitmentModal(`<div class="modal-head"><div><h2>${esc(r.title||`Recrutamento Nº ${r.recruitment_number}`)}</h2><div class="recruitment-meta">${done}/${total} conscrito(s) com prova realizada</div></div><button class="close" onclick="closeRecruitmentModal()">×</button></div><div class="grid" style="grid-template-columns:1fr 1fr"><div class="field"><label>Nome do conscrito</label><input id="rpName" placeholder="Nome completo"></div><div class="field"><label>ID / Passaporte</label><input id="rpId" placeholder="0000"></div></div><div class="recruitment-actions"><button class="btn gold" onclick="addRecruitmentParticipant(${id})">Inserir Conscrito</button><button class="btn ${allDone&&!alreadySent?'green':'gray'}" ${allDone&&!alreadySent?'':'disabled'} onclick="sendRecruitmentProofs(${id})">${sendLabel}</button></div><div class="recruitment-meta" style="margin-top:8px">O botão de envio para aprovação só é liberado quando todos os conscritos cadastrados tiverem concluído a prova.</div><div class="recruitment-modal-list" style="margin-top:15px">${ps.map(p=>`<div class="presence-row"><div><b>${esc(p.name)}</b><div class="recruitment-meta">ID ${esc(p.city_id)} • ${p.score!=null?`Nota ${Number(p.score).toFixed(2)}`:'Prova não realizada'} • ${p.proof_completed?'Prova concluída':p.status}</div></div><div class="recruitment-actions">${p.proof_completed||['submitted','approved','rejected'].includes(String(p.status||''))?`<button class="btn gray" onclick="viewRecruitmentProof(${p.id})">Ver prova</button>${String(p.status||'').toLowerCase()==='approved'&&isRecruitmentManager()?`<button class="btn gold" onclick="editRecruitmentIdentity(${p.id})">✏️ Editar dados</button>`:''}`:`<button class="btn gold" onclick="startRecruitmentProof(${p.id})">Realizar Prova</button>`}<button class="btn red" onclick="deleteRecruitmentParticipant(${p.id},${id})">Excluir</button></div></div>`).join('')||'<div class="muted">Nenhum conscrito inserido.</div>'}</div>`)}
+async function openRecruitmentResults(id){const r=recruitmentCache.find(x=>Number(x.id)===Number(id));if(!r)return;const ps=await api(`/api/recruitments/${id}/participants`);const total=ps.length;const done=ps.filter(p=>p.proof_completed||['submitted','approved','rejected'].includes(String(p.status||''))).length;const allDone=total>0&&done===total;const alreadySent=ps.some(p=>['submitted','approved','rejected'].includes(String(p.status||'')));const sendLabel=alreadySent?'Provas enviadas para aprovação':'Enviar provas para aprovação';showRecruitmentModal(`<div class="modal-head"><div><h2>${esc(r.title||`Recrutamento Nº ${r.recruitment_number}`)}</h2><div class="recruitment-meta">${done}/${total} conscrito(s) com prova realizada</div></div><button class="close" onclick="closeRecruitmentModal()">×</button></div><div class="grid" style="grid-template-columns:1fr 1fr"><div class="field"><label>Nome do conscrito</label><input id="rpName" placeholder="Nome completo"></div><div class="field"><label>ID / Passaporte</label><input id="rpId" type="text" maxlength="32" placeholder="ID/passaporte alfanumérico"></div></div><div class="recruitment-actions"><button class="btn gold" onclick="addRecruitmentParticipant(${id})">Inserir Conscrito</button><button class="btn ${allDone&&!alreadySent?'green':'gray'}" ${allDone&&!alreadySent?'':'disabled'} onclick="sendRecruitmentProofs(${id})">${sendLabel}</button></div><div class="recruitment-meta" style="margin-top:8px">O botão de envio para aprovação só é liberado quando todos os conscritos cadastrados tiverem concluído a prova.</div><div class="recruitment-modal-list" style="margin-top:15px">${ps.map(p=>`<div class="presence-row"><div><b>${esc(p.name)}</b><div class="recruitment-meta">ID ${esc(p.city_id)} • ${p.score!=null?`Nota ${Number(p.score).toFixed(2)}`:'Prova não realizada'} • ${p.proof_completed?'Prova concluída':p.status}</div></div><div class="recruitment-actions">${p.proof_completed||['submitted','approved','rejected'].includes(String(p.status||''))?`<button class="btn gray" onclick="viewRecruitmentProof(${p.id})">Ver prova</button>${String(p.status||'').toLowerCase()==='approved'&&isRecruitmentManager()?`<button class="btn gold" onclick="editRecruitmentIdentity(${p.id})">✏️ Editar dados</button>`:''}`:`<button class="btn gold" onclick="startRecruitmentProof(${p.id})">Realizar Prova</button>`}<button class="btn red" onclick="deleteRecruitmentParticipant(${p.id},${id})">Excluir</button></div></div>`).join('')||'<div class="muted">Nenhum conscrito inserido.</div>'}</div>`)}
 
 async function removeRecruitmentPresence(recruitmentId,userId,userName){
   if(!isRecruitmentManager())return;
@@ -8634,12 +8633,12 @@ async function editRecruitmentIdentity(pid){
     const results=await api('/api/recruitments/results');
     const p=results.find(x=>Number(x.id)===Number(pid));
     if(!p)return;
-    showRecruitmentModal(`<div class="modal-head"><div><h2>EDITAR DADOS DO CONSCRITO</h2><div class="recruitment-meta">Recrutamento Nº ${esc(p.recruitment_number)} • Nota ${Number(p.score||0).toFixed(2)} • Status ${esc(p.status)}</div></div><button class="close" onclick="closeRecruitmentModal()">×</button></div><div class="proof-instructions">Somente Nome e ID/Passaporte podem ser alterados. A nota, respostas e status da aprovação permanecem intactos. A alteração será registrada no histórico e enviada ao Discord.</div><div class="grid" style="grid-template-columns:1fr 1fr"><div class="field"><label>Nome do conscrito</label><input id="editRpName" value="${escapeAttr(p.name)}" maxlength="120"></div><div class="field"><label>ID / Passaporte</label><input id="editRpId" value="${escapeAttr(p.city_id)}" inputmode="numeric"></div></div><div class="recruitment-actions"><button class="btn gold" onclick="saveRecruitmentIdentity(${pid})">Salvar correção</button><button class="btn gray" onclick="viewRecruitmentProof(${pid})">Voltar para prova</button></div>`);
+    showRecruitmentModal(`<div class="modal-head"><div><h2>EDITAR DADOS DO CONSCRITO</h2><div class="recruitment-meta">Recrutamento Nº ${esc(p.recruitment_number)} • Nota ${Number(p.score||0).toFixed(2)} • Status ${esc(p.status)}</div></div><button class="close" onclick="closeRecruitmentModal()">×</button></div><div class="proof-instructions">Somente Nome e ID/Passaporte podem ser alterados. A nota, respostas e status da aprovação permanecem intactos. A alteração será registrada no histórico e enviada ao Discord.</div><div class="grid" style="grid-template-columns:1fr 1fr"><div class="field"><label>Nome do conscrito</label><input id="editRpName" value="${escapeAttr(p.name)}" maxlength="120"></div><div class="field"><label>ID / Passaporte</label><input id="editRpId" value="${escapeAttr(p.city_id)}" type="text" maxlength="32"></div></div><div class="recruitment-actions"><button class="btn gold" onclick="saveRecruitmentIdentity(${pid})">Salvar correção</button><button class="btn gray" onclick="viewRecruitmentProof(${pid})">Voltar para prova</button></div>`);
   }catch(e){alert(e.message)}
 }
 async function saveRecruitmentIdentity(pid){
-  const name=$('editRpName')?.value.trim(),city_id=$('editRpId')?.value.replace(/\D/g,'').trim();
-  if(!name||!city_id)return alert('Informe o nome e o ID/passaporte.');
+  const name=$('editRpName')?.value.trim(),city_id=cleanAlphanumericField($('editRpId')?.value).trim();
+  if(!name||! /^[a-zA-Z0-9-]{1,32}$/.test(city_id))return alert('Informe o nome e um ID/passaporte com letras e números.');
   if(!confirm(`Confirmar correção dos dados?\n\nNome: ${name}\nID: ${city_id}\n\nA nota e a prova não serão alteradas.`))return;
   try{await api(`/api/recruitments/participants/${pid}/edit-identity`,{method:'POST',body:JSON.stringify({name,city_id})});await loadRecruitmentData();await viewRecruitmentProof(pid);alert('Dados atualizados. A alteração foi registrada e enviada ao Discord.')}catch(e){alert(e.message)}
 }
