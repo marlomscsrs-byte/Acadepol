@@ -785,7 +785,6 @@ async function initDb() {
   await query(`ALTER TABLE cip_recruitments ADD COLUMN IF NOT EXISTS discord_agenda_message_id TEXT`);
   // Registros existentes vieram da Agenda e, portanto, são oficiais.
   await query(`UPDATE cip_recruitments SET official=TRUE WHERE official IS NULL`);
-  await query(`UPDATE cip_recruitments cr SET recruiter_id=b.instructor_id FROM bookings b WHERE cr.booking_id=b.id AND cr.recruiter_id IS NULL`);
 
   await query(`CREATE TABLE IF NOT EXISTS cip_recruitment_presence (
     id SERIAL PRIMARY KEY,
@@ -1037,6 +1036,8 @@ async function initDb() {
   // Recrutamentos. Não movemos nem apagamos a marcação original. Apenas
   // criamos um espelho interno ligado pelo booking_id.
   await query(`ALTER TABLE cip_recruitments ADD COLUMN IF NOT EXISTS booking_id INTEGER`);
+  // A coluna booking_id precisa existir antes da consulta de compatibilidade.
+  await query(`UPDATE cip_recruitments cr SET recruiter_id=b.instructor_id FROM bookings b WHERE cr.booking_id=b.id AND cr.recruiter_id IS NULL`);
   await query(`CREATE UNIQUE INDEX IF NOT EXISTS ux_cip_recruitments_booking_id ON cip_recruitments(booking_id) WHERE booking_id IS NOT NULL`);
 
   const configuredUsername = (process.env.ADMIN_USERNAME || "admin").trim().toLowerCase();
