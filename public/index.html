@@ -3534,6 +3534,45 @@ html,body,#app{background:#020a12!important;color:var(--cpi-text)!important}
 <style id="capacitacao-style">
 .capacitacao-page{padding-bottom:30px}.cap-hero{padding:18px 20px;margin-bottom:14px;border:1px solid #333333;border-radius:12px;background:linear-gradient(110deg,#0d1d2c,#091521)}.cap-hero h1{margin:3px 0 5px;font-size:24px}.cap-hero p{margin:0;color:#8095a8;font-size:11px}.cap-toolbar{display:flex;gap:9px;align-items:center;justify-content:space-between;margin-bottom:14px}.cap-toolbar select,.cap-toolbar input{background:#111111;border:1px solid #555555;color:#fff;border-radius:8px;padding:9px 11px;font-size:10px}.cap-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-bottom:14px}.cap-kpi{appearance:none;text-align:left;border:1px solid #1a3047;border-radius:10px;padding:15px;background:linear-gradient(145deg,#0e1e2e,#0b1724);color:#fff;cursor:pointer}.cap-kpi:hover{border-color:#31536e}.cap-kpi.active{border-color:#e02b36;box-shadow:inset 2px 0 #e02b36}.cap-kpi small{display:block;color:#879bb0;font-size:9px;text-transform:uppercase}.cap-kpi b{display:block;font-size:25px;margin-top:7px}.cap-kpi span{display:block;color:#7489a0;font-size:9px;margin-top:4px}.cap-kpi.green b{color:#55dfa0}.cap-kpi.red b{color:#ff7d88}.cap-kpi.gold b{color:#e02b36}.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}.cap-panel{background:linear-gradient(145deg,#0d1b2a,#0a1724);border:1px solid #1a3047;border-radius:10px;overflow:hidden}.cap-panel-head{padding:14px 16px;border-bottom:1px solid #1a2e43;display:flex;align-items:center;justify-content:space-between}.cap-panel-head h2{font-size:13px;margin:0}.cap-panel-head small{color:#d0d0d0;font-size:9px}.cap-list{max-height:360px;overflow:auto}.cap-list-row{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid #172a3e;font-size:10px}.cap-list-row:last-child{border-bottom:0}.cap-list-row b{display:block}.cap-list-row small{display:block;color:#d0d0d0;margin-top:3px}.cap-pill{padding:4px 7px;border-radius:999px;background:#163451;color:#94caff;font-size:8px;font-weight:800;white-space:nowrap}.cap-table-wrap{overflow:auto}.cap-table{width:100%;border-collapse:collapse;min-width:920px}.cap-table th,.cap-table td{padding:9px 10px;border-bottom:1px solid #172a3e;text-align:left;font-size:9px}.cap-table th{color:#8196a8;font-size:8px;text-transform:uppercase;letter-spacing:.5px}.cap-course.ok{color:#55dfa0;font-weight:800}.cap-course.no{color:#d0d0d0}.cap-status{font-weight:800}.cap-status.complete{color:#55dfa0}.cap-status.pending{color:#f0c45c}.cap-status.none{color:#ff7d88}.cap-empty{padding:28px;text-align:center;color:#d0d0d0;font-size:10px}.cap-loading{padding:30px;text-align:center;color:#d0d0d0;font-size:10px}@media(max-width:1100px){.cap-kpis{grid-template-columns:repeat(3,1fr)}.cap-grid{grid-template-columns:1fr}}@media(max-width:700px){.cap-kpis{grid-template-columns:1fr 1fr}.cap-toolbar{align-items:stretch;flex-direction:column}}
 </style>
+
+<style id="academia-final-monochrome-red-theme">
+:root,#app{
+ --gold:#e32636!important;--gold2:#f4f4f5!important;--yellow:#e32636!important;
+ --cpi-gold:#e32636!important;--cpi-gold2:#f4f4f5!important;
+ --r-gold:#e32636!important;--r-gold2:#f4f4f5!important;
+ --line:#383838!important;--line2:#505050!important;
+ --blue:#bfc3c9!important;--green:#c5c7cb!important;--purple:#aeb2b8!important;--orange:#d5d5d5!important;
+ color-scheme:dark;
+}
+/* Base: preto, branco e cinza */
+html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!important;color:#f5f5f5!important}
+#app .card,#app .panel,#app .modal-card,#app .presence-panel,#app .notification-panel,
+#app .agenda-kpi,#app .agenda-day,#app .date,#app .toolbar input,#app .agenda-search,
+#app .agenda-controls select,#app .agenda-view-switch,#app .cal div,#app .table,
+#app .nav button,#app .presence-btn,#app .notification-btn{background-color:#151515!important;border-color:#3d3d3d!important;color:#f1f1f1!important}
+#app .nav button.active,#app .btn.gold,#app .agenda-view-switch button.active,
+#app .calendar-mini-actions .btn,#app .quick-action,#app .quick-actions a{
+ background:#e32636!important;background-image:none!important;color:#fff!important;border-color:#e32636!important;box-shadow:none!important
+}
+#app .btn,#app button{border-color:#505050}
+#app .btn.gold:hover,#app .nav button.active:hover{background:#bd1e2b!important;color:#fff!important}
+#app [class*="yellow"],#app .yellow,#app .badge.coord,#app .pending,#app .today-tag,
+#app .agenda-event.pending,#app .role-select option{background-color:#292929!important;color:#f2f2f2!important;border-color:#555!important}
+#app .blue,#app .green,#app .purple,#app .orange{background:#303030!important;color:#f5f5f5!important}
+#app .red,#app .danger,#app .cancel,#app .btn.danger{background:#e32636!important;color:#fff!important;border-color:#e32636!important}
+#app .eyebrow,#app .logo small,#app .brand span,#app .me-copy small,#app .profile-role,
+#app .week-current,#app .agenda-event-time,#app .calendar-mini-actions .btn,
+#app .top h1,#app .dash-card-top .dash-icon,#app .profile-page .avatar-fallback{color:#e32636!important}
+#app .agenda-day.today{border-color:#e32636!important;box-shadow:0 0 0 1px #e3263622!important}
+#app .agenda-day-head .today-tag{background:#e32636!important;color:#fff!important}
+#app .event,#app .agenda-event{background:#202020!important;border-color:#454545!important}
+#app .agenda-event.cancelled,#app .agenda-event.rejected{border-left-color:#e32636!important}
+#app .status.ok,#app .notification-item.success .nicon{background:#292929!important;color:#f5f5f5!important}
+#app .notification-item.danger .nicon{color:#e32636!important}
+#app a{color:#f0f0f0}
+#app a:hover{color:#e32636}
+</style>
+
 </head>
 <body>
 <div id="auth" class="auth">
