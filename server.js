@@ -3454,13 +3454,65 @@ app.get("/api/dashboard", auth, async (req,res) => {
 });
 
 
-// ACADEPOL: módulo Programas de Formação desconectado da planilha antiga.
-// Mantemos o endpoint compatível com a interface, sem consultar fontes externas.
+const CAPACITACAO_SHEET_ID = "1_0AWLFqrx_xy6z_4WRRejUgGgJh-EpU4K63VHuJQPE8";
+const CAPACITACAO_SHEET_NAME = "Registro Geral";
+let capacitacaoSheetCache = { at: 0, rows: [] };
+const CAP_BASIC_SERVER = ["ACM","MDL","ABD","CPA"];
+const CAP_COMPLEMENTARY_SERVER = ["CPP","APH"];
+
+function capacitacaoCsvParse(text){
+  const rows=[]; let row=[], cell="", quoted=false;
+  for(let i=0;i<text.length;i++){
+    const ch=text[i];
+    if(ch==='"'){
+      if(quoted && text[i+1]==='"'){cell+='"';i++;}
+      else quoted=!quoted;
+    }else if(ch===',' && !quoted){row.push(cell);cell="";}
+    else if((ch==='\n'||ch==='\r') && !quoted){
+      if(ch==='\r'&&text[i+1]==='\n')i++;
+      row.push(cell);rows.push(row);row=[];cell="";
+    }else cell+=ch;
+  }
+  if(cell!==""||row.length){row.push(cell);rows.push(row);}
+  return rows;
+}
+function capacitacaoNormalize(v){return String(v||"").trim().toUpperCase()}
+function capacitacaoBuildRows(csv){
+  const matrix=capacitacaoCsvParse(csv);
+  const headerIndex=matrix.findIndex(r=>capacitacaoNormalize(r[1])==='PASSAPORTE' && capacitacaoNormalize(r[2])==='NOME');
+  if(headerIndex<0) throw new Error("Cabeçalho da aba Registro Geral não encontrado.");
+  const out=[]; const seen=new Map();
+  for(const raw of matrix.slice(headerIndex+1)){
+    const id=String(raw[1]??"").trim(); if(!id)continue;
+    const name=String(raw[2]??"").trim(); if(!name)continue;
+    const courses={};
+    for(let i=0;i<CAP_BASIC_SERVER.length;i++) courses[CAP_BASIC_SERVER[i]]=capacitacaoNormalize(raw[6+i])===CAP_BASIC_SERVER[i];
+    for(let i=0;i<CAP_COMPLEMENTARY_SERVER.length;i++) courses[CAP_COMPLEMENTARY_SERVER[i]]=capacitacaoNormalize(raw[10+i])===CAP_COMPLEMENTARY_SERVER[i];
+    const basic=CAP_BASIC_SERVER.filter(c=>courses[c]).length;
+    const complementary=CAP_COMPLEMENTARY_SERVER.filter(c=>courses[c]).length;
+    const item={id,name,rank:String(raw[3]??"").replace(/^.*?\|\s*/,"").trim(),unit:String(raw[5]??"").replace(/^.*?・/,"").trim(),courses,basic,complementary,admission:String(raw[15]??"").trim()};
+    const old=seen.get(id);
+    if(!old || (id==='505' && /leonardo/i.test(name)) || (old.id!=='505' || !/leonardo/i.test(old.name)) && basic+complementary>old.basic+old.complementary) seen.set(id,item);
+  }
+  return [...seen.values()];
+}
 app.get("/api/capacitacao", auth, async (req,res) => {
   const role=String(req.user?.role||"").trim().toLowerCase();
-  if(!["admin","coordenador_instrucao"].includes(role)) return res.status(403).json({error:"Você não possui acesso ao módulo de capacitação."});
-  res.set("Cache-Control", "no-store");
-  return res.json({rows:[], source:"neon_not_configured", disconnected:true});
+  if(!["admin","coordenador_instrucao"].includes(role)) return res.status(403).json({error:"Você não possui acesso ao relatório de capacitação."});
+  try{
+    const now=Date.now();
+    if(capacitacaoSheetCache.rows.length && now-capacitacaoSheetCache.at<60000) return res.json({rows:capacitacaoSheetCache.rows,cached:true});
+    const url=`https://docs.google.com/spreadsheets/d/${CAPACITACAO_SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(CAPACITACAO_SHEET_NAME)}`;
+    const r=await fetch(url,{headers:{"User-Agent":"Sistema-CIP/1.0"}});
+    if(!r.ok) throw new Error(`Google Sheets respondeu HTTP ${r.status}.`);
+    const csv=await r.text();
+    const rows=capacitacaoBuildRows(csv);
+    capacitacaoSheetCache={at:now,rows};
+    res.json({rows,cached:false});
+  }catch(e){
+    console.error("GET /api/capacitacao:",e);
+    res.status(502).json({error:e.message||"Não foi possível ler a planilha de capacitação."});
+  }
 });
 
 app.get("/api/instructors", auth, async (req,res) => {

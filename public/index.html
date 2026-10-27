@@ -4778,7 +4778,7 @@ main{margin-left:244px!important;padding:20px 26px!important;max-width:none!impo
   </div>
 </section>
 <section id="capacitacao" class="page capacitacao-page">
-  <div class="cap-hero"><div class="eyebrow">CONTROLE DE CAPACITAÇÃO</div><h1>Central de Capacitação</h1><p>Gestão de cursos e resultados da ACADEPOL. A antiga planilha externa foi desconectada; a nova fonte de dados será configurada no banco Neon.</p></div>
+  <div class="cap-hero"><div class="eyebrow">CONTROLE DE CAPACITAÇÃO</div><h1>Central de Capacitação</h1><p>Visão atual do efetivo por cursos básicos e complementares, usando a planilha oficial como fonte de leitura.</p></div>
   <div class="cap-toolbar"><div class="muted" id="capUpdated">Dados ainda não carregados.</div><div style="display:flex;gap:8px;align-items:center"><select id="capFilter" onchange="renderCapacitacao()"><option value="all">Todos os oficiais</option><option value="basic4">4/4 básicos</option><option value="basic3">3/4 básicos</option><option value="basic2">2/4 básicos</option><option value="basic1">1/4 básico</option><option value="basic0">0/4 básicos</option><option value="all6">6/6 cursos</option></select><input id="capSearch" placeholder="Buscar nome ou passaporte" oninput="renderCapacitacao()"></div></div>
   <div class="cap-kpis">
     <button class="cap-kpi" onclick="setCapFilter('all')"><small>Efetivo</small><b id="capTotal">0</b><span>oficiais</span></button>
@@ -5821,7 +5821,7 @@ function renderCapacitacao(){const rows=capacitacaoRows;const filter=$('capFilte
   const bd=$('capBasicDistribution');if(bd)bd.innerHTML=[4,3,2,1,0].map(n=>`<div class="cap-list-row"><div><b>${n}/4 básicos</b><small>${n===4?'ACM, MDL, ABD e CPA completos':n===0?'Nenhum dos quatro básicos':`${4-n} básico(s) pendente(s)`}</small></div><span class="cap-pill">${rows.filter(r=>r.basic===n).length}</span></div>`).join('');const co=$('capComplementaryDistribution');if(co)co.innerHTML=[2,1,0].map(n=>`<div class="cap-list-row"><div><b>${n}/2 complementares</b><small>${n===2?'CPP e APH completos':n===0?'Nenhum complementar': 'CPP ou APH'}</small></div><span class="cap-pill">${rows.filter(r=>r.complementary===n).length}</span></div>`).join('');
   const body=$('capTableBody');if(body)body.innerHTML=visible.length?visible.map(r=>{const pending=CAP_BASIC.filter(c=>!r.courses[c]).join(', ')||'—';const st=r.basic===4?'complete':r.basic===0?'none':'pending';return `<tr><td><b>${capEsc(r.id)}</b></td><td><b>${capEsc(r.name)}</b></td><td>${capEsc(r.rank||'—')}</td><td>${capEsc(r.unit||'—')}</td><td>${r.basic}/4</td><td>${capEsc(pending)}</td><td class="cap-course ${r.courses.CPP?'ok':'no'}">${r.courses.CPP?'✓':'—'}</td><td class="cap-course ${r.courses.APH?'ok':'no'}">${r.courses.APH?'✓':'—'}</td><td>${r.basic+r.complementary}/6</td><td class="cap-status ${st}">${r.basic===4?'Básico completo':r.basic===0?'Nenhum básico':'Básico pendente'}</td></tr>`}).join(''):`<tr><td colspan="10"><div class="cap-empty">Nenhum oficial encontrado.</div></td></tr>`;if($('capRowsCount'))$('capRowsCount').textContent=`${visible.length} encontrado(s)`;
   const sb=$('capSeniorityBody');const seniorFilter=$('capSeniorityFilter')?.value||'all';const senior=[...rows].filter(r=>seniorFilter==='all'||(r.basic+r.complementary)===Number(seniorFilter)).sort((a,b)=>(capDate(a.admission)||new Date(9999,0,1))-(capDate(b.admission)||new Date(9999,0,1)));if(sb)sb.innerHTML=senior.map(r=>`<tr><td><b>${capEsc(r.id)}</b></td><td><b>${capEsc(r.name)}</b></td><td>${capEsc(r.rank||'—')}</td><td>${capEsc(r.unit||'—')}</td><td>${capEsc(String(r.admission||'—').split(' ')[0])}</td><td>${capTenure(r.admission)}</td><td><b>${r.basic+r.complementary}/6</b></td></tr>`).join('')||'<tr><td colspan="7"><div class="cap-empty">Nenhum oficial encontrado.</div></td></tr>'}
-async function loadCapacitacao(){if(!hasCapAccess())return;capacitacaoRows=[];if($('capUpdated'))$('capUpdated').textContent='Planilha antiga desconectada • aguardando configuração do Neon';renderCapacitacao();const body=$('capTableBody');if(body)body.innerHTML='<tr><td colspan="10"><div class="cap-empty">A planilha antiga foi desconectada. Nenhum dado externo será importado. Configure a fonte Neon para ativar este módulo.</div></td></tr>';const senior=$('capSeniorityBody');if(senior)senior.innerHTML='<tr><td colspan="7"><div class="cap-empty">Aguardando conexão com o banco Neon.</div></td></tr>'}
+async function loadCapacitacao(){if(!hasCapAccess())return;const body=$('capTableBody');if(body)body.innerHTML='<tr><td colspan="10"><div class="cap-loading">Carregando dados da planilha...</div></td></tr>';try{const d=await api('/api/capacitacao');capacitacaoRows=Array.isArray(d.rows)?d.rows:[];if($('capUpdated'))$('capUpdated').textContent=`Atualizado em ${new Date().toLocaleString('pt-BR')}`;renderCapacitacao()}catch(e){if(body)body.innerHTML=`<tr><td colspan="10"><div class="cap-empty">Não foi possível carregar a planilha: ${capEsc(e.message)}</div></td></tr>`}}
 
 function go(id,btn){
   const manager=isPrimaryInstructionCoordinator()||isInstructionInternalManager();
@@ -6436,10 +6436,30 @@ async function loadAll(){
       $("dashboardApprovals").style.display="none";
     }
   }catch(e){
-    console.error("Falha ao carregar dashboard:",e);
-    // Keep the UI usable even if a non-critical dashboard request fails.
-    if($("nextList")) $("nextList").innerHTML="<p class='muted'>Não foi possível carregar as marcações.</p>";
-    if($("calendar")) drawCalendar(window.__calendarBookings||[]);
+    console.error("Falha ao carregar dashboard; tentando carregar a agenda de forma independente:",e);
+    // A falha dos KPIs não pode impedir a agenda de carregar os cursos aprovados.
+    try{
+      const bookingResponse=await api("/api/bookings");
+      const fallbackBookings=Array.isArray(bookingResponse)?bookingResponse:[];
+      window.__calendarBookings=fallbackBookings;
+      if($("calendar")) drawCalendar(fallbackBookings);
+      const todayLocal=localDateKey(new Date());
+      const upcoming=fallbackBookings
+        .filter(x=>["approved","confirmed","completed"].includes(String(x.status||"").toLowerCase()))
+        .filter(x=>bookingDateKey(x)>=todayLocal)
+        .sort((a,b)=>(bookingDateKey(a)+" "+String(a.start_time||"")).localeCompare(bookingDateKey(b)+" "+String(b.start_time||"")))
+        .slice(0,4);
+      if($("nextList")) $("nextList").innerHTML=upcoming.map(x=>{
+        const ds=bookingDateKey(x),parts=ds.split("-"),day=parts[2]||"--";
+        const monthNames={"01":"JAN","02":"FEV","03":"MAR","04":"ABR","05":"MAI","06":"JUN","07":"JUL","08":"AGO","09":"SET","10":"OUT","11":"NOV","12":"DEZ"};
+        return `<div class="next-booking"><div class="next-date"><strong>${esc(day)}</strong><span>${monthNames[parts[1]]||parts[1]||""}</span></div><div class="next-info"><b>${esc(x.course||"Curso")}</b><span class="next-instructor">Instrutor: ${esc(x.instructor_name||"Não informado")}</span><span class="next-meta">${esc(String(x.start_time||"--:--").slice(0,5))} – ${esc(String(x.end_time||"--:--").slice(0,5))}</span></div><span class="status ${statusClass(x.status)}">${String(x.status||"").toLowerCase()==="confirmed"?"CONFIRMADA":statusLabel(x.status)}</span></div>`;
+      }).join("")||"<p class='muted'>Sem atividades aprovadas futuras.</p>";
+      try{await loadBookings()}catch(agendaError){console.error("Falha ao atualizar a agenda completa:",agendaError)}
+    }catch(agendaError){
+      console.error("Falha também ao carregar /api/bookings:",agendaError);
+      if($("nextList")) $("nextList").innerHTML="<p class='muted'>Não foi possível carregar as marcações. Verifique a conexão com o servidor.</p>";
+      if($("calendar")) drawCalendar(window.__calendarBookings||[]);
+    }
   }
 }
 function bookingDateKey(item){
