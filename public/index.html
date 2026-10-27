@@ -92,10 +92,10 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;back
  radial-gradient(circle at 28% 50%,rgba(217,184,92,.075),transparent 25%),
  linear-gradient(135deg,#030b14 0%,#071321 55%,#050d17 100%);
 }
-#auth.auth:before{content:"";position:absolute;width:min(620px,52vw);height:min(620px,52vw);left:5vw;top:50%;transform:translateY(-50%);background:url('/academia.svg') center/contain no-repeat;opacity:.12;filter:drop-shadow(0 20px 50px rgba(0,0,0,.5))}
+#auth.auth:before{content:"";position:absolute;width:min(620px,52vw);height:min(620px,52vw);left:5vw;top:50%;transform:translateY(-50%);background:url('/academia-logo.png') center/contain no-repeat;opacity:.12;filter:drop-shadow(0 20px 50px rgba(0,0,0,.5))}
 #auth .auth-card{position:relative;z-index:1;width:min(470px,calc(100vw - 40px));background:linear-gradient(145deg,rgba(9,26,41,.97),rgba(5,16,27,.98));border:1px solid #8e2028;border-radius:15px;padding:30px;box-shadow:0 30px 90px rgba(0,0,0,.45)}
 #auth .logo{justify-content:flex-start;margin-bottom:24px}
-#auth .logo .mark{width:62px;height:62px;border-radius:50%;background:#141414 url('/academia.svg') center/contain no-repeat;border:1px solid #8e2028;font-size:0;box-shadow:0 0 0 5px rgba(217,184,92,.035)}
+#auth .logo .mark{width:62px;height:62px;border-radius:50%;background:#141414 url('/academia-logo.png') center/contain no-repeat;border:1px solid #8e2028;font-size:0;box-shadow:0 0 0 5px rgba(217,184,92,.035)}
 #auth .logo b{font-size:20px;letter-spacing:.8px}
 #auth .logo small{color:var(--gold);font-weight:800}
 #auth .logo em{display:block;color:#748b9e;font-style:normal;font-size:8px;letter-spacing:1px;margin-top:4px}
@@ -112,7 +112,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;back
 #app.app{position:relative;z-index:1;min-height:100vh;background:transparent}
 #app .side{width:238px;background:rgba(3,11,19,.97);border-right:1px solid #112b3d;padding:22px 13px;z-index:20}
 #app .brand{display:flex;align-items:center;gap:10px;padding:0 6px 21px;border-bottom:1px solid #102a3b}
-#app .brand .mark{width:46px;height:46px;border-radius:50%;background:#141414 url('/academia.svg') center/contain no-repeat;border:1px solid #8e2028;font-size:0;flex:none}
+#app .brand .mark{width:46px;height:46px;border-radius:50%;background:#141414 url('/academia-logo.png') center/contain no-repeat;border:1px solid #8e2028;font-size:0;flex:none}
 #app .brand b{font-size:15px;letter-spacing:1.3px}
 #app .brand span{display:block;color:var(--gold);font-size:8px;letter-spacing:1.2px;margin-top:2px}
 #app .brand i{display:block;color:#d0d0d0;font-size:8px;line-height:1.4;font-style:normal;letter-spacing:.6px;margin-top:3px}
@@ -206,7 +206,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;back
 #app .profile-page .profile-hero{display:grid;grid-template-columns:300px minmax(0,1fr);gap:13px;align-items:stretch}
 #app .profile-page .profile-card{border:1px solid var(--line);background:linear-gradient(145deg,#0a1b2a,#101010);border-radius:12px;box-shadow:none}
 #app .profile-page .profile-photo-card{padding:26px 22px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
-#app .profile-page .avatar-lg{width:112px;height:112px;margin:0 auto 15px;border-radius:50%;border:2px solid var(--gold);background:#141414 url('/academia.svg') center/contain no-repeat;overflow:hidden;display:grid;place-items:center;box-shadow:0 0 0 5px rgba(217,184,92,.045)}
+#app .profile-page .avatar-lg{width:112px;height:112px;margin:0 auto 15px;border-radius:50%;border:2px solid var(--gold);background:#141414 url('/academia-logo.png') center/contain no-repeat;overflow:hidden;display:grid;place-items:center;box-shadow:0 0 0 5px rgba(217,184,92,.045)}
 #app .profile-page .avatar-lg img{width:100%;height:100%;object-fit:cover}
 #app .profile-page .avatar-fallback{font-size:34px;font-weight:800;color:var(--gold)}
 #app .profile-page .profile-name{font-size:18px;font-weight:800;margin:0;color:var(--text)}
@@ -247,7 +247,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;back
 #app .modal .field input,#app .modal .field select{background:#071624;border-color:#4a4a4a;color:#edf2f6}
 
 /* subtle logo watermark on application background, not over content */
-#app main:after{content:"";position:fixed;right:4%;bottom:-4%;width:360px;height:360px;background:url('/academia.svg') center/contain no-repeat;opacity:.045;pointer-events:none;z-index:-1}
+#app main:after{content:"";position:fixed;right:4%;bottom:-4%;width:360px;height:360px;background:url('/academia-logo.png') center/contain no-repeat;opacity:.045;pointer-events:none;z-index:-1}
 
 /* MOBILE */
 @media(max-width:1100px){
@@ -385,7 +385,7 @@ body:before{display:none!important}
   transform:translateY(-50%);
   width:min(47vw,620px);
   height:min(47vw,620px);
-  background:url('/academia.svg') center/contain no-repeat;
+  background:url('/academia-logo.png') center/contain no-repeat;
   opacity:.25;
   filter:drop-shadow(0 0 28px rgba(216,180,91,.08));
   pointer-events:none;
@@ -577,7 +577,7 @@ main .btn:not(.green):not(.red):not(.gray){
   bottom:-55px;
   width:270px;
   height:270px;
-  background:url('/academia.svg') center/contain no-repeat;
+  background:url('/academia-logo.png') center/contain no-repeat;
   opacity:.055;
   pointer-events:none;
   z-index:0;
@@ -891,7 +891,7 @@ body{color:var(--r-text)!important}
   height:48px!important;
   min-width:48px!important;
   border-radius:50%!important;
-  background:#101010 url('/academia.svg') center/contain no-repeat!important;
+  background:#101010 url('/academia-logo.png') center/contain no-repeat!important;
   color:transparent!important;
   border:1px solid rgba(216,180,91,.48)!important;
   box-shadow:0 0 0 4px rgba(216,180,91,.035),0 8px 22px rgba(0,0,0,.25)!important;
@@ -1196,7 +1196,7 @@ main .btn:not(.green):not(.red):not(.gray){
   bottom:28px;
   width:300px;
   height:300px;
-  background:url('/academia.svg') center/contain no-repeat;
+  background:url('/academia-logo.png') center/contain no-repeat;
   opacity:.045;
   pointer-events:none;
   z-index:0;
@@ -3587,7 +3587,7 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
 <body>
 <div id="auth" class="auth">
   <div class="auth-card">
-    <div class="logo"><div class="mark">★</div><div><b>INSTRUTORES</b><small>SISTEMA DE GESTÃO</small><em>CORPO DE INSTRUTORES POLICIAIS</em></div></div>
+    <div class="logo"><div class="mark" aria-label="Logo oficial ACADEPOL"></div><div><b>ACADEPOL</b><small>ACADEMIA DE POLÍCIA</small><em>GIGA SP</em></div></div>
     <div class="tabs"><button id="tLogin" class="active" onclick="authTab('login')">Entrar</button><button id="tReg" onclick="authTab('register')">Criar cadastro</button></div>
     <div id="loginBox">
       <h1>Bem-vindo de volta</h1><p class="muted">Acesse sua área de instrutor com seu usuário.</p>
@@ -8523,3 +8523,16 @@ const oldEnter=enter; enter=async function(){
 };
 Object.assign(titles,{recrutamentos:['RECRUTAMENTOS','Visão geral dos recrutamentos'],recrutamentoAgenda:['AGENDA DE MARCAÇÕES','Agenda de recrutamentos e presença da equipe'],recrutamentoRecrutadores:['RECRUTADORES','Equipe autorizada a participar dos recrutamentos'],recrutamentoAtuacao:['ATUAÇÃO MENSAL','Presença efetiva nos recrutamentos'],recrutamentoAprovacoes:['APROVAÇÕES','Aprovação de recrutamentos e provas'],recrutamentoResultados:['RESULTADOS','Conscritos e provas dos recrutamentos'],recrutamentoMaterialApoio:['MATERIAL DE APOIO','Banco, sistema de fardas e materiais']});
 </script>
+
+<style id="academia-official-brand-final">
+:root{--gold:#e32636;--cpi-gold:#e32636;--red:#e32636;--bg:#080808;--text:#f5f5f5;--muted:#b7b7b7;--line:#353535}
+body:before{background:radial-gradient(circle at 82% 8%,rgba(227,38,54,.07),transparent 27%),radial-gradient(circle at 15% 80%,rgba(255,255,255,.025),transparent 25%)!important}
+#auth.auth{background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,.65)),url('/academia-hero.png') center center/cover no-repeat!important}
+#auth.auth:before{background:url('/academia-logo.png') center/contain no-repeat!important;opacity:.10!important}
+#auth .auth-card{background:rgba(10,10,10,.92)!important;border-color:#e32636!important;backdrop-filter:blur(6px)}
+#auth .logo .mark,#app .brand .mark{background:#080808 url('/academia-logo.png') center/contain no-repeat!important;border:1px solid #e32636!important;border-radius:50%!important}
+#auth .logo small,#app .brand span,#app .brand i{color:#d0d0d0!important}
+#auth .tabs button.active,#auth .btn,#app .btn.gold{background:linear-gradient(135deg,#e32636,#a81725)!important;border-color:#e32636!important;color:#fff!important;box-shadow:none!important}
+#app .side{background:#080808!important;border-color:#333!important}
+#app .brand .mark{width:48px!important;height:48px!important}
+</style>
