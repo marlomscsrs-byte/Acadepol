@@ -1,5 +1,5 @@
 {
-  "name": "academypol",
+  "name": "acadepol-academia-de-policia",
   "version": "2.1.0",
   "private": true,
   "description": "ACADEPOL — Academia de Polícia com PostgreSQL/Neon, autenticação, cursos, instrutores, avaliações e relatórios.",

@@ -9,7 +9,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ACADEPOL — Academia de Polícia</title>
+<title>ACADEPOL | Academia de Polícia</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#101010;color:#ffffff;font-family:Inter,Segoe UI,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!important}
 .auth{min-height:100vh;display:grid;place-items:center;padding:20px}.auth-card{width:min(430px,100%);background:#191919;border:1px solid #383838;border-radius:18px;padding:30px;box-shadow:0 30px 90px #0008}.logo{display:flex;gap:12px;align-items:center;margin-bottom:24px}.mark{width:45px;height:45px;border-radius:13px;background:#c51f2b;display:grid;place-items:center;font-size:22px}.logo b{font-size:18px}.logo small{display:block;color:#d0d0d0;font-size:9px;letter-spacing:1.5px;margin-top:3px}.tabs{display:flex;background:#111111;padding:4px;border-radius:9px}.tabs button{flex:1;border:0;background:none;color:#c7c7c7;padding:10px;border-radius:7px}.tabs button.active{background:#8f111b;color:#fff}.auth h1{font-size:24px;margin:25px 0 6px}.muted{color:#c7c7c7}.field{margin:12px 0}.field label{display:block;font-size:12px;color:#dddddd;margin-bottom:6px}.field input,.field select{width:100%;padding:11px;background:#111111;border:1px solid #555555;border-radius:8px;color:#fff}.btn{border:0;background:#c51f2b;color:#fff;font-weight:700;padding:11px 15px;border-radius:8px}.btn.full{width:100%;margin-top:10px}.btn.green{background:#158c52}.btn.red{background:#a92c3b}.btn.gray{background:#182b3f}.msg{margin-top:12px;padding:10px;border-radius:8px;background:#102c47;color:#a7d0ff;font-size:13px}
@@ -3635,6 +3635,72 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
 /* Garante que o conteúdo do cartão fique acima da camada escura */
 #auth .auth-card,.auth .auth-card{z-index:2;position:relative;}
 </style>
+
+<style id="acadepol-distinctive-identity-v1">
+/* ACADEPOL — identidade visual própria. Não reutiliza o tema do ACADEPOL. */
+:root{--bg:#080808!important;--bg2:#101010!important;--panel:#151515!important;--panel2:#1b1b1b!important;--panel3:#222!important;--line:#383838!important;--line2:#4b4b4b!important;--gold:#e32636!important;--gold2:#f5f5f5!important;--text:#f5f5f5!important;--muted:#b8b8b8!important;--muted2:#929292!important;--blue:#e32636!important;--green:#bdbdbd!important;--yellow:#d0d0d0!important;--red:#e32636!important;--cpi-gold:#e32636!important;--cpi-gold2:#f5f5f5!important;--navy:#080808!important;--navy2:#111!important;--panel:#151515!important;--panel2:#1b1b1b!important;--line:#383838!important;--line2:#4b4b4b!important;}
+html,body,#app{background:#080808!important;color:#f5f5f5!important;font-family:Inter,"Segoe UI",Arial,sans-serif!important}
+body:before,body:after{background-color:transparent!important}
+#app .side{background:#0d0d0d!important;border-right:1px solid #333!important;box-shadow:none!important}
+#app .brand-approved{background:#0d0d0d!important;border-bottom:1px solid #333!important}
+#app .brand-approved .brand-logo{width:82px!important;height:82px!important;margin:0 auto 7px!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#app .brand-approved .brand-logo img{width:82px!important;height:82px!important;object-fit:contain!important;filter:none!important;border-radius:50%!important}
+#app .brand-approved .brand-copy b{font-size:19px!important;letter-spacing:1.5px!important;font-weight:900!important;color:#fff!important}
+#app .brand-approved .brand-copy span{font-size:9px!important;letter-spacing:1.8px!important;color:#bdbdbd!important;font-weight:800!important}
+#app .brand-approved .brand-copy i{color:#e32636!important;letter-spacing:2px!important}
+#app .nav-section-title{color:#8b8b8b!important;letter-spacing:2.3px!important;font-size:9px!important}
+#app .nav button{background:transparent!important;border:1px solid transparent!important;border-radius:7px!important;color:#bcbcbc!important;box-shadow:none!important}
+#app .nav button:hover{background:#1b1b1b!important;border-color:#3a3a3a!important;color:#fff!important}
+#app .nav button.active,#app .nav button[aria-current="page"]{background:#202020!important;border-color:#4a4a4a!important;color:#fff!important;box-shadow:inset 3px 0 #e32636!important}
+#app .nav-icon,#app .nav button svg{color:#bdbdbd!important;stroke:currentColor!important}
+#app .top{background:#0b0b0b!important;border-bottom:1px solid #333!important;box-shadow:none!important}
+#app .top h1,#app #title{color:#f5f5f5!important}
+#app .top p,#app .unit-line{color:#a7a7a7!important}
+#app .top-right button,#app .date,#app .workspace-switcher{background:#171717!important;border:1px solid #383838!important;color:#d7d7d7!important;box-shadow:none!important}
+#app .presence-dot{background:#bdbdbd!important;box-shadow:none!important}
+#dashboard .cpi-hero{height:clamp(250px,25vw,330px)!important;min-height:250px!important;margin:12px 0 18px!important;border:1px solid #444!important;border-radius:5px!important;background-image:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.16) 65%,rgba(0,0,0,.5)),url('/academia-hero.png')!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;box-shadow:none!important;}
+#dashboard .cpi-hero-copy{padding:30px 32px!important}
+#dashboard .cpi-eyebrow{color:#e32636!important;letter-spacing:3px!important;font-size:10px!important}
+#dashboard .cpi-hero h1,#dashboard .cpi-hero h1 span,#dashboard .cpi-hero h1 #heroGreeting{color:#f5f5f5!important}
+#dashboard .cpi-hero h1 #heroUserName{color:#e32636!important}
+#dashboard .cpi-hero p,#dashboard .cpi-description{color:#dedede!important}
+#dashboard .cpi-gold-line{background:#e32636!important}
+#dashboard .cpi-hero-logo{width:145px!important;height:145px!important;object-fit:contain!important;border-radius:50%!important;filter:drop-shadow(0 5px 16px #000)!important}
+#dashboard .cpi-kpis{gap:12px!important;margin:0 0 16px!important}
+#dashboard .cpi-kpi,#app .card,#app .panel,#app .box,.recruitment-cpi-kpi{background:#141414!important;border:1px solid #353535!important;border-radius:5px!important;box-shadow:none!important}
+#dashboard .cpi-kpi{min-height:90px!important}
+#dashboard .cpi-kpi .kpi-icon,#dashboard .cpi-kpi .kpi-icon svg{color:#e32636!important;border-color:#555!important;background:#1b1b1b!important;stroke:currentColor!important}
+#dashboard .cpi-kpi strong,#dashboard .cpi-kpi b,#dashboard .cpi-kpi .value{color:#fff!important}
+#app .blue,#app .purple,#app .yellow,#app .green,#app .orange{background:#1b1b1b!important;color:#eee!important;border-color:#444!important}
+#app .btn,#app button.btn,#app .btn.gold,#app .quick-action,#app .recruitment-gold-line{background:#e32636!important;color:#fff!important;border-color:#e32636!important;box-shadow:none!important}
+#app .btn:hover,#app button:hover.btn{filter:brightness(1.08)!important}
+#app .btn.outline,#app .btn.gray,#app .btn.secondary{background:#1b1b1b!important;color:#eee!important;border:1px solid #4a4a4a!important}
+#app input,#app select,#app textarea{background:#111!important;border:1px solid #444!important;color:#f5f5f5!important;box-shadow:none!important}
+#app input:focus,#app select:focus,#app textarea:focus{border-color:#e32636!important;outline:none!important}
+#app table,#app th,#app td{border-color:#383838!important}
+#app th{background:#202020!important;color:#f5f5f5!important}
+#app td{background:#131313!important;color:#d8d8d8!important}
+#app .modal,#app .modal-content,#app .dropdown-menu,#app .notification-panel,#app .presence-panel{background:#141414!important;border-color:#444!important;color:#f5f5f5!important;box-shadow:0 20px 60px #000b!important}
+#auth.auth{background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.42)),url('/academia-hero.png') center/cover no-repeat!important}
+#auth .auth-card{background:rgba(12,12,12,.94)!important;border:1px solid #4a4a4a!important;border-radius:8px!important;box-shadow:0 24px 80px #000b!important;backdrop-filter:blur(8px)!important}
+#auth .logo .mark{display:block!important;width:66px!important;height:66px!important;flex:0 0 66px!important;border-radius:50%!important;background:url('/academia-logo.png') center/contain no-repeat!important}
+#auth .logo b{color:#fff!important;letter-spacing:1.5px!important}
+#auth .logo small{color:#bdbdbd!important}
+#auth .logo em{color:#e32636!important}
+#auth .tabs{background:#171717!important;border:1px solid #383838!important}
+#auth .tabs button{color:#c5c5c5!important}
+#auth .tabs button.active{background:#e32636!important;color:#fff!important}
+#auth h1{color:#fff!important}
+#auth .muted,#auth p{color:#c6c6c6!important}
+#auth .field label{color:#ddd!important}
+#auth .field input,#auth .field select{background:#111!important;border-color:#444!important;color:#fff!important}
+#auth .btn,#auth .btn.full{background:#e32636!important;color:#fff!important;border:1px solid #e32636!important}
+#auth a{color:#f2f2f2!important}
+#app .cpi-hero-logo,#app .recruitment-hero-logo{background:transparent!important}
+@media(max-width:900px){#dashboard .cpi-hero{height:250px!important;min-height:250px!important}#dashboard .cpi-hero-logo{width:92px!important;height:92px!important;right:15px!important}#dashboard .cpi-hero-copy{padding:22px!important}#dashboard .cpi-hero h1{font-size:25px!important}#dashboard .cpi-kpis{gap:8px!important}}
+@media(max-width:600px){#dashboard .cpi-hero{height:230px!important;min-height:230px!important;background-position:center!important}#dashboard .cpi-hero-logo{display:none!important}#dashboard .cpi-hero-copy{padding:20px!important}#dashboard .cpi-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+</style>
+
 </head>
 <body>
 <div id="auth" class="auth">
@@ -3773,7 +3839,7 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
 </div>
 </aside>
 <main>
-  <div class="top"><div><h1 id="title">DASHBOARD</h1><p id="subtitle">Visão geral do sistema</p><div class="unit-line">CORPO DE INSTRUTORES POLICIAIS <span>•</span> 1º BPM <span>•</span> SINCE 2025</div></div><div class="top-right"><div class="presence-wrap"><button class="presence-btn" id="presenceBtn" type="button" aria-label="Usuários online" aria-expanded="false"><span class="presence-dot"></span><span id="presenceCount">0 online</span></button><div class="presence-panel" id="presencePanel"><div class="presence-head"><strong>Usuários no site</strong><small id="presenceUpdated">Atualizando...</small></div><div class="presence-list" id="presenceList"><div class="presence-empty">Carregando...</div></div></div></div><div class="notification-wrap"><button class="notification-btn" id="notificationBtn" type="button" aria-label="Notificações" aria-expanded="false"><span class="notification-count" id="notificationCount">0</span></button><div class="notification-panel" id="notificationPanel"><div class="notification-head"><strong>Notificações</strong><button type="button" onclick="markAllNotificationsRead()">Marcar todas como lidas</button></div><div class="notification-list" id="notificationList"><div class="notification-empty">Nenhuma notificação.</div></div></div></div><div class="date">▣ <b id="todayText"></b></div><div id="workspaceSwitcher" class="workspace-switcher" aria-label="Alternar área"><button id="workspaceRecruitmentBtn" type="button" onclick="switchWorkspace('recruitment')"><span class="ws-dot"></span>RECRUTAMENTO</button><button id="workspaceInstructionBtn" type="button" onclick="switchWorkspace('instruction')"><span class="ws-dot"></span>INSTRUÇÃO</button></div><button class="top-profile" type="button" onclick="openProfile()"><span class="top-profile-avatar" id="topProfileAvatar">?</span><span><b id="topProfileName">—</b><small id="topProfileRole">—</small></span></button></div></div>
+  <div class="top"><div><h1 id="title">DASHBOARD</h1><p id="subtitle">Visão geral do sistema</p><div class="unit-line">ACADEPOL <span>•</span> ACADEMIA DE POLÍCIA <span>•</span> GIGA SP</div></div><div class="top-right"><div class="presence-wrap"><button class="presence-btn" id="presenceBtn" type="button" aria-label="Usuários online" aria-expanded="false"><span class="presence-dot"></span><span id="presenceCount">0 online</span></button><div class="presence-panel" id="presencePanel"><div class="presence-head"><strong>Usuários no site</strong><small id="presenceUpdated">Atualizando...</small></div><div class="presence-list" id="presenceList"><div class="presence-empty">Carregando...</div></div></div></div><div class="notification-wrap"><button class="notification-btn" id="notificationBtn" type="button" aria-label="Notificações" aria-expanded="false"><span class="notification-count" id="notificationCount">0</span></button><div class="notification-panel" id="notificationPanel"><div class="notification-head"><strong>Notificações</strong><button type="button" onclick="markAllNotificationsRead()">Marcar todas como lidas</button></div><div class="notification-list" id="notificationList"><div class="notification-empty">Nenhuma notificação.</div></div></div></div><div class="date">▣ <b id="todayText"></b></div><div id="workspaceSwitcher" class="workspace-switcher" aria-label="Alternar área"><button id="workspaceRecruitmentBtn" type="button" onclick="switchWorkspace('recruitment')"><span class="ws-dot"></span>RECRUTAMENTO</button><button id="workspaceInstructionBtn" type="button" onclick="switchWorkspace('instruction')"><span class="ws-dot"></span>INSTRUÇÃO</button></div><button class="top-profile" type="button" onclick="openProfile()"><span class="top-profile-avatar" id="topProfileAvatar">?</span><span><b id="topProfileName">—</b><small id="topProfileRole">—</small></span></button></div></div>
 
   
 <section id="dashboard" class="page active">
@@ -4455,7 +4521,7 @@ html,body,#app,#app main,#app .sidebar,#app .topbar{background-color:#080808!imp
     <div class="recruitment-hero-copy">
       <div class="recruitment-eyebrow">SISTEMA DE RECRUTAMENTOS</div>
       <h1><span id="recruitmentGreeting">Boa noite</span>, <span id="recruitmentUserName">Usuário</span></h1>
-      <p>Bem-vindo ao módulo de gestão de recrutamentos do Corpo de Instrutores.</p>
+      <p>Bem-vindo ao módulo de seleção e formação da ACADEPOL.</p>
       <div class="recruitment-gold-line"></div>
       <p class="recruitment-description">Gerencie marcações, acompanhe a equipe, registre presenças<br>e controle os resultados dos conscritos de forma rápida e eficiente.</p>
     </div>
@@ -5124,7 +5190,7 @@ async function disableTwitchLive(id,btn){
   }catch(e){alert(e.message||'Não foi possível desativar o alerta.');if(btn){btn.disabled=false;btn.textContent=old||'Desativar';}}
 }
 
-const titles={dashboard:["Dashboard","Visão geral do Corpo de Instrutores."],capacitacao:["CAPACITAÇÃO","Visão geral da capacitação do efetivo."],changelog:["CHANGE LOG","Histórico oficial de atualizações do sistema"],discordMonitor:["MONITOR DISCORD","Saúde da comunicação com a API do Discord"],marcacoes:["MARCAÇÕES","Controle de agenda e cursos"],instrutores:["INSTRUTORES","Equipe cadastrada"],atuacao:["ATUAÇÃO SEMANAL","Controle automático de atuação dos instrutores"],disponibilidade:["DISPONIBILIDADE","Horários disponíveis"],materiais:["MATERIAIS DE APOIO","Regras, uniformes e materiais para instrutores"],relatorios:["RELATÓRIOS","Indicadores e desempenho"],perfil:["MEU PERFIL","Dados da sua conta"],resultados:["RESULTADOS","Notas e resultados dos cursos"],aprovacoes:["APROVAÇÕES","Cadastros e marcações aguardando aprovação"],ausencias:["REGISTRO DE AUSÊNCIA","Ausências registradas pela equipe"],reconhecimento:["RECONHECIMENTO","Destaques e insígnias dos instrutores"]};
+const titles={dashboard:["Dashboard","Visão geral da ACADEPOL."],capacitacao:["CAPACITAÇÃO","Visão geral da capacitação do efetivo."],changelog:["CHANGE LOG","Histórico oficial de atualizações do sistema"],discordMonitor:["MONITOR DISCORD","Saúde da comunicação com a API do Discord"],marcacoes:["MARCAÇÕES","Controle de agenda e cursos"],instrutores:["INSTRUTORES","Equipe cadastrada"],atuacao:["ATUAÇÃO SEMANAL","Controle automático de atuação dos instrutores"],disponibilidade:["DISPONIBILIDADE","Horários disponíveis"],materiais:["MATERIAIS DE APOIO","Regras, uniformes e materiais para instrutores"],relatorios:["RELATÓRIOS","Indicadores e desempenho"],perfil:["MEU PERFIL","Dados da sua conta"],resultados:["RESULTADOS","Notas e resultados dos cursos"],aprovacoes:["APROVAÇÕES","Cadastros e marcações aguardando aprovação"],ausencias:["REGISTRO DE AUSÊNCIA","Ausências registradas pela equipe"],reconhecimento:["RECONHECIMENTO","Destaques e insígnias dos instrutores"]};
 
 function roleLabel(role){return role==="admin"?"Administrador":role==="coordenador_instrucao"?"Coordenador de Instrução":role==="coordenador_recrutamentos"?"Coordenador de Recrutamentos":role==="coordenador"?"Coordenador (legado)":role==="recrutador"?"Recrutador":role==="instrutor_recrutador"?"Instrutor/Recrutador":"Instrutor"}
 function initials(name){return String(name||"?").trim().split(/\s+/).slice(0,2).map(x=>x[0]).join("").toUpperCase()||"?"}
